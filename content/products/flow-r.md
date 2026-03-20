@@ -39,5 +39,5 @@ content: |
   [Open FlowR](https://example.com/flowr)
 
   If you need a tailored demo for your team, contact us at [contact@celestialsynthesis.com](mailto:contact@celestialsynthesis.com).
-image: /images/products/flowr-cover.svg
+image: /images/products/flowr-illustration.webp
 ---

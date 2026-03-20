@@ -11,55 +11,56 @@
       </div>
     </section>
 
-    <section class="pathways band-light" aria-label="Choose a path">
+    <section class="pathways band-light" aria-label="What we build">
       <div class="section-inner">
         <header class="section-header section-header--compact">
-          <p class="section-eyebrow">Your Need, Our Lane</p>
-          <h2>Choose The Direction That Fits Your Team Best</h2>
+          <p class="section-eyebrow">What We Build</p>
+          <h2>Software That Helps People Work Smarter</h2>
         </header>
         <div class="pathway-grid">
           <article class="pathway-card">
-            <p class="pathway-kicker">Product Delivery</p>
+            <p class="pathway-kicker">Business Solutions</p>
             <h3>
-              <span class="pathway-title-line">Need a steadier way</span>
-              <span class="pathway-title-line">to plan, build, and</span>
-              <span class="pathway-title-line">launch software?</span>
+              <span class="pathway-title-line">Need software that</span>
+              <span class="pathway-title-line">helps your business move</span>
+              <span class="pathway-title-line">faster and with less effort?</span>
             </h3>
             <p>
-              We bring product thinking, technical structure, and delivery
-              discipline so teams can move without constant reset cycles.
+              We build practical digital solutions for businesses that want to
+              improve operations, reduce repetitive work, and create better
+              systems for the people behind them.
             </p>
             <div class="pathway-media">
               <img
-                src="/images/header/about-studio.svg"
+                src="/images/header/about-us-illustration.webp"
                 width="1200"
                 height="760"
                 alt="Product delivery illustration"
               />
             </div>
-            <NuxtLink class="text-link" to="/about">See How We Work</NuxtLink>
+            <NuxtLink class="text-link" to="/about">Learn About Celestial Synthesis</NuxtLink>
           </article>
           <article class="pathway-card pathway-card">
-            <p class="pathway-kicker">Workflow Enablement</p>
+            <p class="pathway-kicker">Flagship Product</p>
             <h3>
-              <span class="pathway-title-line">Need repeatable guidance</span>
-              <span class="pathway-title-line">for browser-based workflows</span>
-              <span class="pathway-title-line">across your team?</span>
+              <span class="pathway-title-line">FlowR brings clearer</span>
+              <span class="pathway-title-line">guidance to websites, tools,</span>
+              <span class="pathway-title-line">and team workflows.</span>
             </h3>
             <p>
-              FlowR helps teams capture, replay, and keep workflow knowledge
-              usable long after the original project handoff.
+              As the first product we built, FlowR shows how we turn everyday
+              friction into something simple, usable, and easy to share.
             </p>
             <div class="pathway-media">
               <img
-                src="/images/products/flowr-cover.svg"
+                src="/images/products/flowr-illustration.webp"
                 width="1400"
                 height="840"
                 alt="FlowR workflow illustration"
               />
             </div>
             <NuxtLink class="text-link" to="/product/flow-r"
-              >Discover FlowR</NuxtLink
+              >Explore FlowR</NuxtLink
             >
           </article>
         </div>
@@ -69,41 +70,46 @@
     <section class="mission band-white" aria-label="Mission highlights">
       <div class="section-inner mission-inner">
         <header class="section-header">
-          <p class="section-eyebrow">Beyond Building Features</p>
-          <h2>Our Mission Is Durable Product Momentum</h2>
+          <p class="section-eyebrow">Why Teams Trust Us</p>
+          <h2>Built By Engineers Who Know Software Beyond The Pitch</h2>
           <p>
-            We help teams move from uncertainty to structured delivery with
-            clearer choices, stronger systems, and less operational drag.
+            Our team brings more than a decade of experience in software and
+            has contributed to mature products used by millions. We value clear
+            thinking, practical decisions, and solutions that stay useful long
+            after launch.
           </p>
         </header>
         <div class="mission-list">
           <article>
             <span>01</span>
             <div>
-              <h3>Clear Priorities</h3>
+              <h3>Real Product Experience</h3>
               <p>
-                We cut noise, define the highest-value outcomes, and align teams
-                around decisions that actually move the product forward.
+                We are not guessing from the outside. We have helped build
+                software at scale and bring that experience into every product
+                and client solution we create.
               </p>
             </div>
           </article>
           <article>
             <span>02</span>
             <div>
-              <h3>Frictionless Execution</h3>
+              <h3>Smart Elegant Solutions</h3>
               <p>
-                Through pragmatic architecture and tighter delivery structures,
-                we remove blockers before they grow into chaos.
+                We believe many complex problems can be solved with a smarter,
+                simpler approach that removes friction instead of adding more
+                process around it.
               </p>
             </div>
           </article>
           <article>
             <span>03</span>
             <div>
-              <h3>Reliable Ownership</h3>
+              <h3>Helpful From Start To Finish</h3>
               <p>
-                We stay close to the work from framing through rollout so
-                quality, adoption, and confidence remain intact.
+                We stay approachable throughout the process, helping teams make
+                better decisions early and staying involved until the solution
+                works in the real world.
               </p>
             </div>
           </article>
@@ -111,35 +117,36 @@
       </div>
     </section>
 
-    <section class="journey band-blue" aria-label="Delivery journey">
+    <section class="journey band-blue" aria-label="How we work">
       <div class="section-inner">
         <header class="section-header section-header--compact">
-          <p class="section-eyebrow">A Practical Delivery Path</p>
-          <h2>A Builder's Journey. Not A Fire Drill.</h2>
+          <p class="section-eyebrow">How We Work</p>
+          <h2>From Business Friction To Better Systems</h2>
         </header>
         <div class="journey-grid">
           <article class="journey-step">
             <span class="step-no">01</span>
-            <h3>Frame The Problem</h3>
+            <h3>Understand The Problem</h3>
             <p>
-              Map goals, constraints, and product context until the direction is
-              hard to misunderstand.
+              We start by understanding where time, effort, and clarity are
+              being lost so the right solution becomes easier to define.
             </p>
           </article>
           <article class="journey-step">
             <span class="step-no">02</span>
-            <h3>Design The System</h3>
+            <h3>Shape The Right Solution</h3>
             <p>
-              Structure flows, architecture, and implementation sequencing
-              before delivery gets expensive.
+              We recommend a practical path forward, whether that means a new
+              product, a focused internal tool, or a simpler workflow that gets
+              the job done.
             </p>
           </article>
           <article class="journey-step">
             <span class="step-no">03</span>
-            <h3>Ship And Stabilize</h3>
+            <h3>Build And Support</h3>
             <p>
-              Release in measured increments, learn quickly, and harden what
-              matters for the long term.
+              We deliver with long-term usefulness in mind, so teams can adopt
+              the solution with confidence and keep growing from it.
             </p>
           </article>
         </div>
@@ -150,29 +157,30 @@
       <div class="section-inner spotlight-inner">
         <div class="spotlight-copy">
           <p class="section-eyebrow">Product Spotlight</p>
-          <h2>FlowR: Guided Workflow Capture And Replay</h2>
+          <h2>FlowR: A Practical Way To Show People How To Use The Web</h2>
           <p>
-            FlowR helps teams document, share, and maintain browser workflows
-            with less friction than static documentation and fewer knowledge
-            gaps after handoff.
+            FlowR is the first product we built at Celestial Synthesis. It
+            helps people communicate website and tool usage more clearly,
+            whether they are guiding family members, onboarding teams, or
+            introducing newly released features across departments.
           </p>
           <ul>
-            <li>Record interactions as reusable guided sequences</li>
-            <li>Replay with contextual highlights and step instructions</li>
-            <li>Keep workflows current with fast fixes and updates</li>
+            <li>Show someone exactly how to complete a task on a website</li>
+            <li>Make internal training easier for browser-based tools</li>
+            <li>Help teams explain and adopt new product features faster</li>
           </ul>
           <div class="hero-actions hero-actions--dark">
             <NuxtLink class="btn btn-primary" to="/product/flow-r"
-              >View FlowR In Detail</NuxtLink
+              >Learn More About FlowR</NuxtLink
             >
             <NuxtLink class="btn btn-secondary" to="/contact"
-              >Discuss your use case</NuxtLink
+              >Talk To Our Team</NuxtLink
             >
           </div>
         </div>
         <div class="spotlight-media">
           <img
-            src="/images/products/flowr-cover.svg"
+            src="/images/products/flowr-illustration.webp"
             width="1400"
             height="840"
             alt="FlowR product visual"
@@ -183,17 +191,17 @@
 
     <section class="closing-cta band-accent">
       <div class="section-inner closing-inner">
-        <p class="section-eyebrow">Ready To Build With Clarity?</p>
+        <p class="section-eyebrow">See What We Build</p>
         <h2>
-          Bring structure to the next product move before delivery turns
-          reactive.
+          Explore FlowR, or start a conversation about the kind of software
+          your business really needs.
         </h2>
         <div class="hero-actions hero-actions--centered">
-          <NuxtLink class="btn btn-primary" to="/contact"
-            >Talk to the team</NuxtLink
+          <NuxtLink class="btn btn-primary" to="/product/flow-r"
+            >Explore FlowR</NuxtLink
           >
-          <NuxtLink class="btn btn-secondary" to="/about"
-            >Read Our Approach</NuxtLink
+          <NuxtLink class="btn btn-secondary" to="/contact"
+            >Talk To The Team</NuxtLink
           >
         </div>
       </div>
@@ -489,7 +497,6 @@ setSeoHead(home.SEOmetaData);
       height: auto;
       display: block;
       border-radius: $border-radius2;
-      background: rgba(239, 245, 253, 0.8);
     }
   }
 
@@ -590,7 +597,7 @@ setSeoHead(home.SEOmetaData);
     height: auto;
     display: block;
     border-radius: $border-radius3;
-    background: rgba(255, 255, 255, 0.08);
+    background: #f9fafb;
   }
 
   .closing-cta {

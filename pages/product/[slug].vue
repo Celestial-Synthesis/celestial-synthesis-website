@@ -61,7 +61,7 @@
 						</ul>
 					</div>
 					<div class="aside-card aside-card--accent">
-						<img class="aside-illustration" src="/images/products/flowr-cover.svg" width="1400" height="840" alt="FlowR illustration" />
+						<img class="aside-illustration" src="/images/products/flowr-illustration.webp" width="1400" height="840" alt="FlowR illustration" />
 						<p class="lane-kicker">Next Step</p>
 						<h3>See how FlowR would map to your workflow.</h3>
 						<p>We can walk through the browser processes your team repeats most often and show where FlowR removes handoff friction.</p>

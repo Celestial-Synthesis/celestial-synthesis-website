@@ -9,7 +9,7 @@
 					<NuxtLink class="btn btn-primary" to="/contact">Talk to the team</NuxtLink>
 				</div>
 				<div class="hero-visual">
-					<img src="/images/products/flowr-cover.svg" width="1400" height="840" alt="Product illustration" />
+					<img src="/images/products/flowr-illustration.webp" width="1400" height="840" alt="Product illustration" />
 				</div>
 			</div>
 		</section>
@@ -22,7 +22,7 @@
 						<h2>Focused tools, presented clearly.</h2>
 					</header>
 					<div class="catalog-visual">
-						<img src="/images/header/about-studio.svg" width="1200" height="760" alt="Product systems illustration" />
+						<img src="/images/header/about-us-illustration.webp" width="1200" height="760" alt="Product systems illustration" />
 					</div>
 				</div>
 				<div class="cards-grid">
