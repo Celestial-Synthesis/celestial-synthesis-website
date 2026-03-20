@@ -1,174 +1,58 @@
-# Nuxt3 - Decap CMS boilerplate
+# Celestial Synthesis Website
 
+Company website built with Nuxt 3 and Nuxt Content.
 
-**Live boilerplate example:** https://sailsnake-nuxt-decap-boilerplate.netlify.app
+## Current pages
 
+- `/` Home
+- `/about` About Us
+- `/products` Product list
+- `/product/[slug]` Product detail
+- `/contact` Contact
 
-**Link to repo:** https://github.com/Sfolkerts89/Nuxt3-starter__Decap-cms
+## Content structure
 
-## A simple starting point
+- `content/pages/home.md` Home page content and SEO metadata
+- `content/products/*.md` Product entries used by `/products` and `/product/[slug]`
 
-This boilerplate will get you going quick in building with Nuxt and Decap CMS. The base boilerplate consists out of the following:
+## Main UI structure
 
-### Decap CMS (config.yml)
+- `layouts/default.vue` Global layout shell
+- `components/layout/header.vue` Site header
+- `components/layout/logo.vue` Company logo block
+- `components/navigation/mainMenu.vue` Main navigation
+- `components/layout/footer.vue` Footer and quick links
 
-* SEO anchor ready to go (simply use "- &seo" in any page/ file collection)
+## Run locally
 
-* Cloudinary support
+1. Install dependencies:
 
-### Pages
+  ```bash
+  yarn install
+  ```
 
-* Home page (this README content)
+2. Start development server:
 
-* A typography page with headings, paragraphs, list etc. to help you write your typography styles in one view
+  ```bash
+  yarn dev
+  ```
 
-### Styling
+3. Build for production:
 
-* Minimal boilerplate styling
+  ```bash
+  yarn build
+  ```
 
-* Simple responsive GRID layout
+## Content editing (Decap)
 
-* Categorized .scss files (main.scss, mixins.scss, type.scss, variables.scss etc.)
+Decap config lives at `public/admin/config.yml`.
 
-* variables.modules.scss which allows you to export your scss variables from variables.scss to be used in JS vars. Example: `const color = variables.myColor`
+Current editable collections:
 
-### Components
+- Home page (`content/pages/home.md`)
+- Products (`content/products/*.md`)
 
-* A simplistic menu component which switches to a mobile menu in small viewports
+## Notes
 
-* Layout components (logo, header, footer) already called in layout/default.vue
-
-* A responsive image component that calls a full width or downsized version of am image, is responsive to its parent container and has a built in lightbox (Props: lightbox, objectFit: Boolean, color: String)
-
-
-### Composables:
-
-* mdToHtml() composable: uses Nuxt/Content/MDC renderer. This first renders an HTML object from markdown input and returns the HTML object as a single string. This renders server side ;)
-
-* setSeoHead() composable: just feed the SEOmetaData object (defined in config.yaml) from your api data; `setSeoHead(apiData.SEOmetaData)`
-
-* useBtnData() composable: does an api call to /content/buttons.md and returns a single button string. Example `const buttonText = useBtnData('buttonsApi.readmore')` => result: `"hello! Read moar!"`. Conistent button text's throughout your site when using `slot` in a `button.vue` component
-
-## Install
-
-1. Clone this repo: `git clone https://github.com/Sfolkerts89/Nuxt3-starter__Decap-cms.git` or click 'Use this template'
-
-2. `yarn install` or `npm install`
-
-4. Run frontend locally: `yarn dev` or `npm run dev`
-
-3. Boot up Decap CMS locally:
-  * uncomment `local_backend: true` (*leave this out in production for safety's sake*)
-  * run `npx decap-server`
-  * Navigate to: localhost:3000/admin (asuming you have a frontend instance running)
-
-## Netlify deployment
-  * Build command: `npm run generate` (dont use YARN: Node will run out of memory)
-  * Publish directory: `dist`
-
-## Boilerplate__extras/ (folder)
-
-I found it tough to decide wether to build an extranous boilerplate packed with features or to keep it clean and simple.. So i did both..
-Addtional code snippets, components and more can be found in the folder 'boilerplate__extras'. If you want to start clean and simple, just delete the folder!
-
-
-### /decap__config/
-
-* basic 'products' collection (i.e. one level dynamic page names with a re-occuring content structure)
-
-* Dynamic Fields using Yaml anchors (much like a page builder) which includes a carousel/lightbox option for mulitple images
-
-* Dynamic Fields collection: code snippet that can be used as is and built upon/ changed to suite your needs.
-
-### /nuxt__pages/
-
-#### /product/ + [slug].vue
-
-A simple dynamic page based of slug as a parameter set up as a 'products' page. This is in relation to the 'products' colleciton in boilerplate__extras/decap__config/
-
-#### Contact.vue
-
-Very simplistic contact page that includes the `<BasicInquery />' component. Place the 'forms' folder in a corresponding 'components' folder in your project and uncomment for use.
-
-#### dynamic-fields.vue
-
-A page that utlizes the `<dynamicFields />` component. This works in relation with:
-
-* The Dynamic Fields anchor provided in: /decap__config/
-
-* The Dynamic Fields collection provided in: /decap__config/
-
-#### Products.vue
-
-A simple page displays all the products in the products collection. 
-
-### vue__components/forms/
-
-In this folder you will find modular form building components. Along with a simple contact form that utilizes a few of these. 
-Aside from being modular, the simple contact form has form input validation:
-
-1. Input field validation happens in the child component
-
-2. Child component emits validation data
-
-3. Parent component pushes data in an array and checks if all entries are valid
-
-### /vue__components/media/
-
-#### Carousel.vue component with the following options via props:
-
-* imageOnly (Boolean): enable only an array of image links are provided
-
-* Slides (Array): image, caption
-
-* Timed (Boolean): enables timedSlides() function, a slideshow if you will
-
-* hasEnlarge: Enables an overlay on hover which allows for the carousel to enlarge to 100% of the container (full screen function)
-
-* Color (String): provide a color value for carousel colored elements
-
-#### RespImage.vue
-
-Responsive image component based on Cloudinary transformations
-
-##### Props
-
-* url (String): set up for filename only i.e. `"my-image.jpg"`
-
-* Lightbox (Boolean, default: false): enables lightbox function
-
-* Objectfit (String, default: null): sets CSS object-fit property
-
-* Color (String): passes color to lightbox accent color
-
-
-##### RespVideo.vue
-
-Responsive video component based on Cloudinary transformations
-
-#### Props
-
-* url (String): set up for filename only i.e. `"my-image.jpg"`
-
-* hasSound (Boolean, default: null): sets muted property. If hasSound is set, video controls will appear to allow playback. Otherwise playback will `autoplay` (if autoplay is set to true)
-
-* Autoplay (Boolean, default null): sets autoplay property when video is in view
-
-* loop (Boolean, default null): Sets loop propery
-
-* id (String):  the autoplay in view feature needs an element id to work. The video is is built using `:id` + `props.url.slice(-10)` (ensures unique id's per page)
-
-
-### vue__components/misc/ (folder)
-
-* DynamicFields.vue:
-In here you will find the dynamicFields.vue component that corresponds with the 'dynamicFields.vue'. You will need this component to render the fields 'dynamic-fields' collection in dynamicFields.vue
-
-* Copyright.vue:
-A component displaying current year and your branding
-
-
-### vue__composables/ (folder)
-
-* slugify.js:
-A simple composable that returns a slug typed string (handy for fetching a slug off a title)
+- Boilerplate extras and unused template pages/files were removed.
+- Placeholder assets are currently used for the company logo and FlowR product visual.

@@ -1,51 +1,51 @@
 <template>
-	<div
-		id="header__logo"
-		class="company-logo"
-	>
-		<NuxtLink to="https://nuxt.com" target="_blank">
-			<img
-				src="/images/logos/nuxt-logo.svg"
-				alt="logo"
-				width="800"
-				height="200"
-			/>
-		</NuxtLink>
-		<NuxtLink to="https://decapcms.org" target="_blank">
-			<img
-				src="/images/logos/decap-logo.svg"
-				alt="logo"
-				width="104"
-				height="30"
-			/>
-		</NuxtLink>
-		<span>Boilerplate</span>
-	</div>
+  <div id="header__logo" class="company-logo">
+    <NuxtLink to="/" aria-label="Celestial Synthesis home">
+      <img
+        src="/images/logos/celestial-synthesis.webp"
+        alt="Celestial Synthesis logo"
+      />
+      <span>Celestial Synthesis</span>
+    </NuxtLink>
+  </div>
 </template>
 
 <style lang="scss" scoped>
-	.company-logo {
-		position: relative;
-		height: 2em; 
-		margin: 1em;
-		padding-bottom: 3em;
-		padding-right: 1em;
-		width: max-content;
-		border-right: 1px solid $light-grey;
-		img {
-			position: relative;
-			height: 2em;
-			width: auto;
-		}
-		span {
-			position: absolute;
-			font-size: 0.8em;
-			right: 1em;
-			bottom: 0;
-			transform: translateX(5%);
-			font-style: italic;
-			font-family: $font-art;
-			color: $dark-grey;
-		}
-	}
+.company-logo {
+  height: 3em;
+  margin: 0;
+  width: max-content;
+  display: flex;
+  align-items: center;
+
+  a {
+    display: inline-flex;
+    align-items: center;
+    gap: $spacing2;
+  }
+
+  img {
+    position: relative;
+    height: 3em;
+    width: auto;
+  }
+
+  span {
+    display: inline-block;
+    max-width: 7.6em;
+    font-size: 1.08rem;
+    font-style: normal;
+    font-family: $font-main;
+    font-weight: 600;
+    letter-spacing: 0.01em;
+    line-height: 1.05;
+    color: $dark-grey;
+    text-wrap: balance;
+
+    @include media(xsm) {
+      max-width: 6.8em;
+      font-size: 0.92rem;
+    }
+  }
+}
 </style>

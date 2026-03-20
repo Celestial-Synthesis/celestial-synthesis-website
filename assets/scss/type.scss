@@ -12,7 +12,8 @@ h1, .h1,
 h2, .h2,
 h3, .h3 {
 	font-family: $font-accent;
-	text-transform: uppercase;
+	text-transform: none;
+	letter-spacing: -0.01em;
 }
 
 h1, .h1 {
@@ -21,6 +22,7 @@ h1, .h1 {
 		font-size: $font-size2;
 	}
 	position: relative;
+	font-weight: 700;
 	&:before {
 		position: absolute;
 		content: "";
@@ -34,6 +36,7 @@ h1, .h1 {
 
 h2, .h2 {
 	font-size: $font-size2;
+	font-weight: 700;
 	@include media(xsm) {
 		font-size: $font-size3;
 	}
@@ -41,6 +44,7 @@ h2, .h2 {
 
 h3, .h3 {
 	font-size: $font-size4;
+	font-weight: 700;
 }
 
 h4, .h4 {
@@ -59,8 +63,8 @@ h5, .h5 {
 
 blockquote {
 	font-size: $font-size5;
-	font-family: $font-art;
-	font-weight: bold;
+	font-family: $font-main;
+	font-weight: 600;
 	text-align: justify;
 	text-justify: inter-word;
 }

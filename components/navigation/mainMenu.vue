@@ -1,27 +1,43 @@
 <template>
 	<div id="main-menu">
-		<div id="mobile-menu__toggle-button" @click="toggleMobileMenu()" :class="{ mobileMenuOpen: mobileMenuActive }">
-			<span>&#x2630;</span>
-			MENU 
-		</div>
+		<button
+			id="mobile-menu__toggle-button"
+			type="button"
+			@click="toggleMobileMenu()"
+			:class="{ mobileMenuOpen: mobileMenuActive }"
+			:aria-expanded="mobileMenuActive ? 'true' : 'false'"
+			aria-controls="site-navigation"
+			aria-label="Toggle navigation menu"
+		>
+			<span class="toggle-icon">{{ mobileMenuActive ? '×' : '☰' }}</span>
+			<span class="toggle-label">{{ mobileMenuActive ? 'Close' : 'Menu' }}</span>
+		</button>
 
-		<nav :class="{ mobileMenuOpen: mobileMenuActive }">
-
-			<menu class="main-menu__basic">
-				<NuxtLink to="/" class="menu-item item--home" prefetch>
-					<span>home</span>
+		<nav id="site-navigation" :class="{ mobileMenuOpen: mobileMenuActive }">
+			<div class="mobile-menu-panel">
+				<menu class="main-menu__basic">
+					<NuxtLink to="/" class="menu-item item--home" prefetch>
+						<span>Home</span>
+					</NuxtLink>
+					<NuxtLink to="/product/flow-r" class="menu-item" prefetch>
+						<span>FlowR</span>
+					</NuxtLink>
+					<NuxtLink to="/about" class="menu-item" prefetch>
+						<span>About Us</span>
+					</NuxtLink>
+					<NuxtLink to="/contact" class="menu-item" prefetch>
+						<span>Contact</span>
+					</NuxtLink>
+				</menu>
+				<NuxtLink to="/contact" class="header-cta" prefetch>
+					Talk to the team
 				</NuxtLink>
-				<NuxtLink to="/typography" class="menu-item" prefetch>
-					<span>typography</span>
-				</NuxtLink>
-			</menu>
+			</div>
 		</nav>
 	</div>
 </template>
 
 <script setup>
-
-const links = ["products", "dynamic-fields", "contact"];
 const mobileMenuActive = ref(false);
 const route = useRoute();
 watch(route, () => {
@@ -44,51 +60,144 @@ watch(
 
 <style lang="scss" scoped>
 nav {
-	display: grid;
+	display: flex;
+	align-items: center;
+	gap: $spacing2;
+
 	@include media(xsm) {
-		padding-top: 8em; // pushes item below 'header' (toggle-button span:before)
+		position: fixed;
+		inset: 0;
+		display: none;
+		padding: 4.9rem $spacing4 $spacing4;
+		background: rgba(255, 255, 255, 0.72);
+		backdrop-filter: blur(10px);
 	}
 }
 
+.mobile-menu-panel {
+	display: flex;
+	align-items: center;
+	gap: $spacing2;
+
+	@include media(xsm) {
+		display: grid;
+		align-content: start;
+		gap: $spacing2;
+		width: 100%;
+		padding: $spacing3 $spacing3 $spacing2;
+		border-radius: 1rem;
+		background: rgba(255, 255, 255, 0.97);
+		border: 1px solid rgba(30, 43, 61, 0.08);
+		box-shadow: 0 1.2em 2.4em rgba(23, 37, 58, 0.08);
+	}
+}
 
 .main-menu__basic {
 	position: relative;
 	display: flex;
 	flex-wrap: wrap;
 	align-content: center;
+	gap: $spacing1;
 	margin: 0;
 	padding: 0;
 
 	@include media(xsm) {
 		position: relative;
-		display: block;
-		height: 100%;
+		display: grid;
+		gap: 0;
+		height: auto;
 		margin: 0;
 		padding-left: 0;
+		width: 100%;
+		background: $white;
+		border-top: 1px solid rgba(30, 43, 61, 0.12);
 	}
 
 	span {
-		padding: $spacing2;
-		width: 8em;
+		padding: $spacing1 $spacing2;
+		width: auto;
 		@include media(xsm) {
-			width: auto;
+			width: 100%;
+			padding: $spacing2 0;
 		}
 	}
 
 	.menu-item {
 		cursor: pointer;
+		@include media(xsm) {
+			width: 100%;
+		}
+
 		span {
 			display: block;
 			text-align: center;
 			list-style: none;
+			font-family: $font-accent;
+			text-transform: none;
+			letter-spacing: 0.01em;
+			font-weight: 600;
+			font-size: $font-size8;
+			border-radius: 999px;
 			transition: $transition1;
+
+			@include media(xsm) {
+				text-align: left;
+				font-size: $font-size6;
+				border-radius: 0;
+				background: transparent;
+				border: 0;
+				border-bottom: 1px solid rgba(30, 43, 61, 0.12);
+				color: $dark-grey;
+			}
+		}
+
+		&.router-link-active span,
+		&:hover span {
+			background: #edf4fb;
+			color: $base-color;
 		}
 
 		@include media(xsm) {
-			&.router-link-active {
-				outline: 0.3em solid var(--hover-background-color);
+			&.router-link-active span,
+			&:hover span {
+				background: transparent;
+				border-color: rgba(30, 43, 61, 0.22);
+				color: $base-color;
 			}
 		}
+	}
+}
+
+.header-cta {
+	display: inline-flex;
+	align-items: center;
+	justify-content: center;
+	padding: $spacing1 $spacing3;
+	border-radius: 999px;
+	background: $base-color;
+	color: $white;
+	font-family: $font-accent;
+		text-transform: none;
+		letter-spacing: 0.01em;
+		font-weight: 600;
+	font-size: $font-size8;
+	white-space: nowrap;
+	transition: $transition2;
+
+	&:hover {
+		transform: translateY(-1px);
+		opacity: 0.92;
+	}
+
+	@include media(xsm) {
+		display: inline-flex;
+		width: fit-content;
+		padding: $spacing1 0;
+		font-size: $font-size7;
+		border-radius: 0;
+		background: transparent;
+		border: 0;
+		color: $base-color;
 	}
 }
 
@@ -98,67 +207,60 @@ nav {
 nav {
 	@include media(xsm) {
 		display: none;
-		menu {
-			display: block !important;
-		}
 	}
 }
 
 nav.mobileMenuOpen {
-	position: fixed;
-	display: grid;
-	grid-template-rows: auto max-content 1fr;
-	height: 100vh;
-	width: max-content;
-	top: 0;
-	right: 0;
-	background: $white;
-	&::before {
-		position: fixed;
-		content: "";
-		width: 100%;
-		height: 100vh;
-		backdrop-filter: blur(0.3em);
-		inset: 0;
+	@include media(xsm) {
+		display: block;
 	}
 }
 
 #mobile-menu__toggle-button {
 	display: none;
 	cursor: pointer;
+	border: 0;
+	background: transparent;
+	color: $dark-grey;
 	@include media(xsm) {
-		position: absolute;
+		position: relative;
 		z-index: 99;
-		display: block;
+		display: inline-flex;
+		align-items: center;
+		gap: $spacing1;
 		font-size: 0.8em;
 		text-align: center;
-		width: max-content;
-		margin-inline: auto;
-		justify-self: center;
-		padding: $spacing1;
-		margin-top: $spacing0;
-		right: 0;
+		width: auto;
+		padding: $spacing1 0;
+		border-radius: 999px;
+		border: 0;
+		background: transparent;
+		box-shadow: none;
 	}
-	span {
-		font-size: $font-size2;
-		display: block;
+	.toggle-icon {
+		font-size: $font-size3;
+		line-height: 1;
+	}
+
+	.toggle-label {
+		font-family: $font-accent;
+		font-size: $font-size8;
+		font-weight: 600;
+		letter-spacing: 0.01em;
 	}
 }
 
 #mobile-menu__toggle-button.mobileMenuOpen {
-	position: fixed;
-
-	span::after {
-		display: block;
+	@include media(xsm) {
+		color: $base-color;
 	}
 }
 
 #main-menu {
+	position: relative;
 	@include media(xsm) {
-		position: absolute;
+		position: relative;
 		z-index: 99;
-		top: 0;
-		right: 0;
 	}
 }
 </style>

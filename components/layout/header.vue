@@ -1,29 +1,39 @@
 <template>
 	<header id="header">
-		<LayoutLogo />
-		<NavigationMainMenu />
+		<div class="header-inner">
+			<LayoutLogo />
+			<NavigationMainMenu />
+		</div>
 	</header>
 </template>
 
 
 <style lang="scss" scoped>
 #header {
-	position: relative;
-	display: grid;
-	grid-template-columns: 1fr auto 1fr;
-	grid-template-rows: 1fr;
-	padding: $spacing2;
-	&::before {
-		position: absolute;
-		content: "";
-		width: 100%;
-		height: 0.1em;
-		top: 100%;
-		background-image: linear-gradient(90deg, $base-color, $secondary-color);
+	position: sticky;
+	top: 0;
+	z-index: 100;
+	padding: 0 $spacing3;
+	background: rgba(255, 255, 255, 0.92);
+	backdrop-filter: blur(10px);
+	border-bottom: 1px solid #dde6f0;
+
+	.header-inner {
+		display: flex;
+		align-items: center;
+		justify-content: space-between;
+		gap: $spacing4;
+		max-width: 86em;
+		margin-inline: auto;
+		min-height: 5.2em;
 	}
+
 	@include media(xsm) {
-		display: block;
-		padding: $spacing1 0;
+		padding: 0 $spacing4;
+
+		.header-inner {
+			min-height: 4.5em;
+		}
 
 		#locale-toggle {
 			display: none;
@@ -32,14 +42,11 @@
 }
 
 #header__logo {
-	grid-column: 1;
-	grid-row: 1;
+	align-self: center;
 }
 
 #main-menu {
-	grid-column: 2;
-	grid-row: 1;
 	align-self: center;
-	justify-self: center;
+	justify-self: end;
 }
 </style>

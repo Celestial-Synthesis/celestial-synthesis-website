@@ -91,10 +91,13 @@ const accentColor = computed(() => {
 	position: relative;
 	width: 100%;
 	height: 100%;
+	min-width: 0;
+	overflow: hidden;
 
 	img {
 		width: 100%;
 		height: 100%;
+		display: block;
 		object-fit: v-bind('objectFit');
 	}
 }
@@ -144,7 +147,7 @@ dialog.__lightbox {
 	width: 100%;
 	height: 100%;
 	background: rgba($color: $dark-grey, $alpha: 0.8);
-	border: 0.2em solid $base-color;
+	border: 0.2em solid v-bind('accentColor');
 	z-index: 1;
 	opacity: 0;
 	transition: $transition2;
@@ -154,7 +157,7 @@ dialog.__lightbox {
 
 	span {
 		font-size: $font-size1;
-		color: $base-color;
+		color: v-bind('accentColor');
 		text-align: center;
 
 		&::after {

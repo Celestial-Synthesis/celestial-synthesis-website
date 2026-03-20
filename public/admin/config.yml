@@ -1,64 +1,27 @@
-# disable in production:  
+# Disable in production
 local_backend: true
-# command to run a local Decap instance: npx-decap-server
 
 backend:
   name: git-gateway
-  branch: master # Branch to update (optional; defaults to master)
+  branch: master
 
 media_folder: "public/upload"
-public_folder: "/"
+public_folder: "/upload"
 
-site_url: https://sailsnake-decapcms.netlify.app
+site_url: https://celestialsynthesis.com
 
-media_library:
-  name: cloudinary
-  # output_filename_only: true
-  config:
-    cloud_name: <YOUR_CLOUD_NAME_HERE>
-    api_key: <YOUR_API_KEY_HERE> 
-
-
-# SEO anchor:
 seo: &seo
   name: "SEOmetaData"
   label: "SEO"
   widget: "object"
   collapsed: true
-  fields: 
+  fields:
     - { name: "metaTitle", label: "SEO Title", widget: "string", default: "{{ title }}", required: true }
-    - { name: "metaDescription", label: "SEO Description", widget: "string", pattern: [".{20,160}", "between 20 and 160 characters"], required: true, hint: "must be between 20 and 160 characters" }
-    - { name: "metaImage", label: "SEO image", widget: "image"}
-    - { name: "keywords", label: "keywords", widget: "string", hint: "keywords are comma seperated", required: false }
-
-
+    - { name: "metaDescription", label: "SEO Description", widget: "string", pattern: [".{20,160}", "between 20 and 160 characters"], required: true }
+    - { name: "metaImage", label: "SEO image", widget: "image", required: false }
+    - { name: "keywords", label: "keywords", widget: "string", required: false }
 
 collections:
-  - name: "globalContent"
-    label: "global content"
-    files: 
-      - label: "buttons"
-        name: "buttons"
-        file: "content/site/buttons.md"    
-        fields: 
-          - label: "next"
-            name: "next"
-            widget: "string"        
-          - label: "previous"
-            name: "previous"
-            widget: "string"        
-          - label: "close"
-            name: "close"
-            widget: "string"        
-          - label: "article: more"
-            name: "article"
-            widget: "string"
-            default: "read more"
-          - label: "form: send"
-            name: "send"
-            widget: "string"
-        
-  # SINGLE PAGES
   - name: "pages"
     label: "Pages"
     files:
@@ -69,21 +32,15 @@ collections:
           - { name: "title", label: "Title", widget: "string" }
           - { name: "content", label: "Content", widget: "markdown" }
           - *seo
-      - name: "typography"
-        label: "Typography"
-        file: "content/pages/typography.md"
-        fields:
-          - { name: "title", label: "Title", widget: "string" }
-          - { name: "content", label: "Content", widget: "markdown" }
-      - name: "Fiddly diddlies"
-        label: "diddlies"
-        extension: json
-        file: "content/pages/fiddly-diddlies.json"
-        fields:
-          - { name: "title", label: "Title", widget: "string" }
-          - { name: "test-fields", label: "field objects test", widget: "string", default: "fields.title" }
-          - { name: "content", label: "Content", widget: "markdown" }
-     
 
-          
-
+  - name: "products"
+    label: "Products"
+    folder: "content/products"
+    create: true
+    slug: "{{slug}}"
+    fields:
+      - { name: "title", label: "Title", widget: "string" }
+      - { name: "description", label: "Short Description", widget: "string" }
+      - { name: "image", label: "Feature image", widget: "image", required: false }
+      - { name: "content", label: "Content", widget: "markdown" }
+      - *seo

@@ -1,0 +1,22 @@
+<svg xmlns="http://www.w3.org/2000/svg" width="1200" height="760" viewBox="0 0 1200 760" role="img" aria-labelledby="title desc">
+  <title id="title">About Studio Illustration</title>
+  <desc id="desc">A clean studio-style illustration for the about page.</desc>
+  <defs>
+    <linearGradient id="bg" x1="0" y1="0" x2="1" y2="1">
+      <stop offset="0%" stop-color="#f8fbff"/>
+      <stop offset="100%" stop-color="#e7f0fa"/>
+    </linearGradient>
+  </defs>
+  <rect width="1200" height="760" rx="24" fill="url(#bg)"/>
+  <rect x="72" y="72" width="1056" height="616" rx="20" fill="#ffffff" stroke="#d7e6f6" stroke-width="4"/>
+  <rect x="128" y="136" width="370" height="22" rx="11" fill="#d9e8f8"/>
+  <rect x="128" y="174" width="620" height="14" rx="7" fill="#e8f1fb"/>
+  <rect x="128" y="234" width="460" height="306" rx="18" fill="#f4f9fe" stroke="#dbe8f8"/>
+  <rect x="620" y="234" width="452" height="306" rx="18" fill="#f4f9fe" stroke="#dbe8f8"/>
+  <circle cx="354" cy="387" r="86" fill="#2a4d6f"/>
+  <ellipse cx="354" cy="387" rx="130" ry="42" fill="none" stroke="#8ec5ff" stroke-width="6"/>
+  <rect x="672" y="288" width="340" height="26" rx="13" fill="#dbe9f8"/>
+  <rect x="672" y="328" width="260" height="16" rx="8" fill="#e8f1fb"/>
+  <rect x="672" y="378" width="320" height="16" rx="8" fill="#e8f1fb"/>
+  <rect x="672" y="428" width="280" height="16" rx="8" fill="#e8f1fb"/>
+</svg>

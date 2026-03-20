@@ -71,10 +71,6 @@ body * {
 		grid-row: 2;
 		main {
 			min-height: 100%;
-			padding: $spacing6;
-			@include media(xsm) {
-				padding-inline: $spacing2;
-			}
 			a {
 				color: $base-color;
 			}
