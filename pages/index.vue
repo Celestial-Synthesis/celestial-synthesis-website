@@ -13,7 +13,7 @@
 
     <section class="pathways band-light" aria-label="What we build">
       <div class="section-inner">
-        <header class="section-header section-header--compact">
+        <header class="section-header">
           <p class="section-eyebrow">What We Build</p>
           <h2>Software That Helps People Work Smarter</h2>
         </header>

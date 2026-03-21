@@ -11,38 +11,45 @@
 							Email us at
 							<a class="contact-email" href="mailto:contact@celestialsynthesis.com">contact@celestialsynthesis.com</a>
 						</p>
-						<p class="contact-note">For inquiries, partnerships, and product questions. We typically reply within one business day.</p>
 						<div class="actions">
 							<NuxtLink class="btn btn-primary" to="/product/flow-r">Explore FlowR</NuxtLink>
 							<NuxtLink class="btn btn-secondary" to="/about">About Celestial Synthesis</NuxtLink>
 						</div>
 					</div>
 					<div class="art">
-						<img src="/images/header/contact-visual.svg" width="1200" height="760" alt="Contact and collaboration visual" />
+						<div class="hero-visual">
+							<img src="/images/header/contact-us-illustration.webp" width="1200" height="760" alt="Contact and collaboration visual" />
+						</div>
 					</div>
 				</div>
-				</div>
+			</div>
 		</section>
 
 		<section class="contact-links band-white" aria-label="Quick links">
-			<div class="section-inner quick-links">
-				<header class="section-header section-header--compact">
+			<div class="section-inner contact-links-layout">
+				<header class="section-header contact-links-header">
 					<p class="section-eyebrow">Start Here</p>
 					<h2>Start with the right path.</h2>
 					<p>Whether you want to understand FlowR, learn more about our company, or start a practical software conversation, here is the fastest route.</p>
 				</header>
-				<article class="link-card">
+				<div class="contact-links-list">
+					<article class="contact-link-row">
 					<p class="link-kicker">Product</p>
-					<h3>FlowR</h3>
-					<p>See how FlowR helps people explain websites, internal tools, and new features with clearer guidance and less repeated effort.</p>
-					<NuxtLink class="text-link" to="/product/flow-r">Open FlowR Page</NuxtLink>
-				</article>
-				<article class="link-card">
+					<div>
+						<h3>FlowR</h3>
+						<p>See how FlowR helps people explain websites, internal tools, and new features with clearer guidance and less repeated effort.</p>
+						<NuxtLink class="text-link" to="/product/flow-r">Open FlowR Page</NuxtLink>
+					</div>
+					</article>
+					<article class="contact-link-row">
 					<p class="link-kicker">Company</p>
-					<h3>About Us</h3>
-					<p>Learn about our experience, how we think about software, and why we focus on smart, elegant solutions to practical business problems.</p>
-					<NuxtLink class="text-link" to="/about">Read About Us</NuxtLink>
-				</article>
+					<div>
+						<h3>About Us</h3>
+						<p>Learn about our experience, how we think about software, and why we focus on smart, elegant solutions to practical business problems.</p>
+						<NuxtLink class="text-link" to="/about">Read About Us</NuxtLink>
+					</div>
+					</article>
+				</div>
 			</div>
 		</section>
 
@@ -143,22 +150,32 @@ useSeoMeta({
 		grid-template-columns: minmax(0, 1.12fr) minmax(18rem, 0.78fr);
 		gap: clamp(1.75rem, 1.2rem + 1.4vw, 3.5rem);
 		align-items: center;
-		padding-block: $spacing3;
+		padding-block: $spacing3 $spacing5;
 
 		@include media(xsm, sm) {
 			grid-template-columns: 1fr;
+			align-items: start;
+			padding-block: $spacing2 $spacing4;
 		}
 	}
 
 	.copy {
 		max-width: 42em;
-		padding: $spacing3 clamp(0rem, 0.4rem + 1vw, $spacing2) $spacing3 0;
+		padding-top: $spacing2;
 	}
 
 	.art {
 		display: flex;
+		align-items: flex-end;
 		justify-content: flex-end;
+		padding-top: $spacing1;
+
+		@include media(xsm, sm) {
+			align-items: center;
+			padding-top: 0;
+		}
 	}
+
 	.contact-line {
 		margin: $spacing3 0 $spacing1;
 		font-size: $font-size6;
@@ -175,17 +192,36 @@ useSeoMeta({
 		color: $dark-grey;
 	}
 
-	.contact-note {
-		margin: 0;
-		line-height: 1.7;
-		color: $grey;
+	.hero-visual {
+		position: relative;
+		width: min(100%, 34rem);
+		padding: clamp(0.85rem, 0.55rem + 1vw, 1.5rem) clamp(0.9rem, 0.45rem + 1vw, 1.5rem) 0 0;
+
+		@include media(xsm, sm) {
+			width: min(100%, 26rem);
+			padding-right: 0;
+
+			&::before {
+				inset: 7% 6% 0 6%;
+			}
+
+			&::after {
+				right: 0.15rem;
+				bottom: 0.8rem;
+				width: 5rem;
+			}
+		}
 	}
 
-	.art img {
-		width: min(100%, 31rem);
+	.hero-visual img {
+		position: relative;
+		width: 100%;
 		height: auto;
 		display: block;
 		border-radius: $border-radius3;
+		background: rgba(255, 255, 255, 0.5);
+		box-shadow: 0 1.25em 2.4em rgba(30, 43, 61, 0.08);
+		z-index: 1;
 	}
 
 	.actions {
@@ -219,44 +255,84 @@ useSeoMeta({
 		}
 	}
 
-	.quick-links {
+	.contact-links-layout {
 		display: grid;
-		grid-template-columns: repeat(2, minmax(0, 1fr));
-		gap: $spacing3;
+		grid-template-columns: minmax(16rem, 0.78fr) minmax(0, 1.22fr);
+		gap: clamp(1.75rem, 1.2rem + 1.5vw, 4rem);
+		align-items: start;
 
 		@include media(xsm, sm) {
 			grid-template-columns: 1fr;
 		}
+	}
 
-		.section-header {
-			grid-column: 1 / -1;
+	.contact-links-header {
+		margin-bottom: 0;
+
+		p:last-child {
+			max-width: 30em;
+		}
+	}
+
+	.contact-links-list {
+		display: grid;
+		gap: $spacing3;
+		position: relative;
+		padding-left: clamp(0.6rem, 0.3rem + 0.8vw, 1.2rem);
+
+		&::before {
+			content: "";
+			position: absolute;
+			left: 0.35rem;
+			top: 0.4rem;
+			bottom: 0.4rem;
+			width: 1px;
+			background: linear-gradient(rgba(42, 77, 111, 0.18), rgba(42, 77, 111, 0.04));
+		}
+	}
+
+	.contact-link-row {
+		display: grid;
+		grid-template-columns: auto 1fr;
+		gap: $spacing3;
+		align-items: start;
+		padding: $spacing2 0 $spacing3;
+		position: relative;
+
+		&::before {
+			content: "";
+			position: absolute;
+			left: calc(-1 * clamp(0.6rem, 0.3rem + 0.8vw, 1.2rem));
+			top: 0.45rem;
+			width: 0.7rem;
+			height: 0.7rem;
+			border-radius: 999px;
+			background: $base-color;
+			box-shadow: 0 0 0 0.45rem rgba(142, 197, 255, 0.16);
+		}
+
+		&:not(:last-child) {
+			border-bottom: 1px solid rgba(42, 77, 111, 0.1);
+		}
+
+		h3 {
 			margin-bottom: $spacing2;
 		}
 
-		.link-card {
-			border-radius: $border-radius3;
-			padding: $spacing4;
-			background: linear-gradient(180deg, #f8fbff, #eef5fd);
-			box-shadow: 0 1em 2em rgba(30, 43, 61, 0.05);
-			border: 1px solid rgba(42, 77, 111, 0.08);
-
-			h3 {
-				margin-bottom: $spacing2;
-			}
-
-			p:last-of-type {
-				margin-bottom: 0;
-			}
+		p:last-of-type {
+			margin-bottom: 0;
 		}
 	}
 
 	.link-kicker {
-		margin: 0 0 $spacing2;
+		margin: 0;
 		font-size: $font-size8;
 		font-weight: 700;
 		letter-spacing: 0.08em;
 		color: $base-color;
 		text-transform: uppercase;
+		min-width: 3.4rem;
+		padding-top: 0.02rem;
 	}
 
 	.text-link {
@@ -291,14 +367,6 @@ useSeoMeta({
 
 		.copy {
 			padding-right: 0;
-		}
-
-		.art {
-			justify-content: center;
-		}
-
-		.art img {
-			width: min(100%, 26rem);
 		}
 	}
 }

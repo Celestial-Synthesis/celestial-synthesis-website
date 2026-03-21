@@ -9,54 +9,58 @@
 						<p class="lead">
 							Celestial Synthesis is built by engineers with more than a decade of software experience and a track record of contributing to products used by millions. We build our own products and help businesses create digital solutions that make work clearer, faster, and easier to manage.
 						</p>
-						<div class="about-points">
-							<div class="about-point">
-								<span>01</span>
-								<p>Real product experience, not just theory.</p>
-							</div>
-							<div class="about-point">
-								<span>02</span>
-								<p>Smart, elegant solutions over unnecessary complexity.</p>
-							</div>
-							<div class="about-point">
-								<span>03</span>
-								<p>Practical guidance before expensive decisions.</p>
-							</div>
-						</div>
 					</div>
 					<div class="art">
 						<img src="/images/header/about-us-illustration.webp" width="1200" height="760" alt="Celestial Synthesis studio visual" />
 					</div>
 				</div>
+				<div class="about-points" aria-label="About highlights">
+					<div class="about-point">
+						<span>01</span>
+						<p>Real product experience, not just theory.</p>
+					</div>
+					<div class="about-point">
+						<span>02</span>
+						<p>Smart, elegant solutions over unnecessary complexity.</p>
+					</div>
+					<div class="about-point">
+						<span>03</span>
+						<p>Practical guidance before expensive decisions.</p>
+					</div>
 				</div>
+			</div>
 		</section>
 
 		<section class="principles band-white" aria-label="Core principles">
-			<div class="section-inner">
-				<div class="principles-intro">
-					<header class="section-header">
-						<p class="section-eyebrow">How We Work</p>
-						<h2>Practical thinking. Broad capability.</h2>
-					</header>
-					<div class="principles-art">
-						<img src="/images/header/celestial-hero.svg" width="1400" height="900" alt="Celestial Synthesis process illustration" />
-					</div>
-				</div>
-				<div class="pillars">
-					<article>
+			<div class="section-inner principles-layout">
+				<header class="section-header principles-header">
+					<p class="section-eyebrow">How We Work</p>
+					<h2>Practical thinking. Broad capability.</h2>
+					<p>
+						We work across products, internal tools, and tailored software solutions, but the principle stays the same: understand the real problem first, then build what is genuinely useful.
+					</p>
+				</header>
+				<div class="principles-list">
+					<article class="principle-row">
 						<p class="pillar-kicker">01</p>
-						<h3>Software With Purpose</h3>
-						<p>We build products, internal tools, and digital solutions that help teams reduce repetitive work and move through operations with less friction.</p>
+						<div>
+							<h3>Software With Purpose</h3>
+							<p>We build products, internal tools, and digital solutions that help teams reduce repetitive work and move through operations with less friction.</p>
+						</div>
 					</article>
-					<article>
+					<article class="principle-row">
 						<p class="pillar-kicker">02</p>
-						<h3>Consultation Before Complexity</h3>
-						<p>We take time to understand the real problem first, so businesses can choose a solution that fits their needs instead of paying for unnecessary complexity.</p>
+						<div>
+							<h3>Consultation Before Complexity</h3>
+							<p>We take time to understand the real problem first, so businesses can choose a solution that fits their needs instead of paying for unnecessary complexity.</p>
+						</div>
 					</article>
-					<article>
+					<article class="principle-row">
 						<p class="pillar-kicker">03</p>
-						<h3>Products That Prove Our Thinking</h3>
-						<p>FlowR is the first product we built at Celestial Synthesis, and it reflects the way we approach software: clear, useful, and designed to solve everyday communication and training problems.</p>
+						<div>
+							<h3>Products That Prove Our Thinking</h3>
+							<p>FlowR is the first product we built at Celestial Synthesis, and it reflects the way we approach software: clear, useful, and designed to solve everyday communication and training problems.</p>
+						</div>
 					</article>
 				</div>
 			</div>
@@ -115,7 +119,7 @@ useSeoMeta({
 	}
 
 	h1 {
-		font-size: clamp(2.7rem, 2rem + 2vw, 4.8rem);
+		font-size: clamp(2.7rem, 2rem + 2vw, 4.7rem);
 		line-height: 0.98;
 		letter-spacing: -0.03em;
 		margin-bottom: $spacing3;
@@ -123,20 +127,20 @@ useSeoMeta({
 	}
 
 	h2 {
-		font-size: clamp(2rem, 1.55rem + 1.2vw, 3.25rem);
+		font-size: clamp(2rem, 1.55rem + 1.2vw, 3.1rem);
 		line-height: 1.02;
 		letter-spacing: -0.02em;
 	}
 
 	.lead {
-		font-size: clamp(1.08rem, 0.95rem + 0.36vw, 1.4rem);
+		font-size: clamp(1.08rem, 0.95rem + 0.36vw, 1.35rem);
 		line-height: 1.7;
 		max-width: 34em;
 		color: $grey;
 	}
 
 	.section-header {
-		max-width: 42em;
+		max-width: 44em;
 		margin-bottom: $spacing5;
 
 		p:last-child {
@@ -160,25 +164,53 @@ useSeoMeta({
 
 	.about-hero-inner {
 		display: grid;
-		grid-template-columns: minmax(0, 1.12fr) minmax(18rem, 0.78fr);
+		grid-template-columns: minmax(0, 1.1fr) minmax(18rem, 0.8fr);
 		gap: clamp(1.75rem, 1.2rem + 1.4vw, 3.5rem);
-		align-items: center;
-		padding-block: $spacing3;
+		align-items: start;
+		padding-block: $spacing3 $spacing5;
 
 		@include media(xsm, sm) {
 			grid-template-columns: 1fr;
+			padding-block: $spacing2 $spacing4;
 		}
 	}
 
 	.copy {
 		max-width: 46em;
-		padding: $spacing3 clamp(0rem, 0.4rem + 1vw, $spacing2) $spacing3 0;
+		padding-top: $spacing2;
+	}
+
+	.art {
+		display: flex;
+		justify-content: flex-end;
+		padding-top: $spacing1;
+
+		@include media(xsm, sm) {
+			justify-content: center;
+			padding-top: 0;
+		}
+	}
+
+	.art img {
+		width: min(100%, 31rem);
+		height: auto;
+		display: block;
+		border-radius: $border-radius3;
+		background: rgba(255, 255, 255, 0.5);
+
+		@include media(xsm, sm) {
+			width: min(100%, 26rem);
+		}
 	}
 
 	.about-points {
 		display: grid;
-		gap: $spacing2;
-		margin-top: $spacing4;
+		grid-template-columns: repeat(3, minmax(0, 1fr));
+		gap: $spacing3;
+
+		@include media(xsm, sm) {
+			grid-template-columns: 1fr;
+		}
 	}
 
 	.about-point {
@@ -186,8 +218,11 @@ useSeoMeta({
 		grid-template-columns: auto 1fr;
 		gap: $spacing2;
 		align-items: start;
-		padding: $spacing1 0;
-		border-bottom: 1px solid rgba(42, 77, 111, 0.12);
+		padding: $spacing3;
+		border-radius: $border-radius3;
+		background: rgba(255, 255, 255, 0.72);
+		border: 1px solid rgba(42, 77, 111, 0.08);
+		box-shadow: 0 1em 2em rgba(30, 43, 61, 0.04);
 
 		span {
 			font-size: $font-size8;
@@ -201,80 +236,89 @@ useSeoMeta({
 		}
 	}
 
-		.art {
-			display: flex;
-			justify-content: flex-end;
-		}
-
-		.art img {
-			width: min(100%, 31rem);
-			height: auto;
-		display: block;
-			border-radius: $border-radius3;
-	}
-
-	.principles-intro {
+	.principles-layout {
 		display: grid;
-		grid-template-columns: minmax(0, 0.9fr) minmax(0, 1.1fr);
-		gap: $spacing5;
-		align-items: center;
-		margin-bottom: $spacing5;
+		grid-template-columns: minmax(16rem, 0.78fr) minmax(0, 1.22fr);
+		gap: clamp(1.75rem, 1.2rem + 1.5vw, 4rem);
+		align-items: start;
 
 		@include media(xsm, sm) {
 			grid-template-columns: 1fr;
 		}
 	}
 
-	.principles-art img {
-		width: 100%;
-		height: auto;
-		display: block;
-		border-radius: $border-radius3;
-		background: #eef5fd;
-		box-shadow: 0 1.3em 2.4em rgba(30, 43, 61, 0.07);
+	.principles-header {
+		margin-bottom: 0;
+
+		p:last-child {
+			max-width: 30em;
+		}
 	}
 
-	.pillars {
+	.principles-list {
 		display: grid;
-		grid-template-columns: repeat(3, minmax(0, 1fr));
 		gap: $spacing3;
+		position: relative;
+		padding-left: clamp(0.6rem, 0.3rem + 0.8vw, 1.2rem);
 
-		@include media(xsm, sm) {
-			grid-template-columns: 1fr;
+		&::before {
+			content: "";
+			position: absolute;
+			left: 0.35rem;
+			top: 0.4rem;
+			bottom: 0.4rem;
+			width: 1px;
+			background: linear-gradient(rgba(42, 77, 111, 0.18), rgba(42, 77, 111, 0.04));
+		}
+	}
+
+	.principle-row {
+		display: grid;
+		grid-template-columns: auto 1fr;
+		gap: $spacing3;
+		align-items: start;
+		padding: $spacing2 0 $spacing3;
+		position: relative;
+
+		&::before {
+			content: "";
+			position: absolute;
+			left: calc(-1 * clamp(0.6rem, 0.3rem + 0.8vw, 1.2rem));
+			top: 0.45rem;
+			width: 0.7rem;
+			height: 0.7rem;
+			border-radius: 999px;
+			background: $base-color;
+			box-shadow: 0 0 0 0.45rem rgba(142, 197, 255, 0.16);
 		}
 
-		article {
-			border-radius: $border-radius3;
-			padding: $spacing4;
-			background: linear-gradient(180deg, #f8fbff, #eef5fd);
-			box-shadow: 0 1.1em 2.1em rgba(30, 43, 61, 0.05);
-			border: 1px solid rgba(42, 77, 111, 0.08);
+		&:not(:last-child) {
+			border-bottom: 1px solid rgba(42, 77, 111, 0.1);
+		}
 
-			h3 {
-				margin-bottom: $spacing2;
-			}
+		h3 {
+			margin-bottom: $spacing2;
+		}
 
-			p:last-child {
-				margin-bottom: 0;
-			}
+		p:last-child {
+			margin-bottom: 0;
 		}
 	}
 
 	.pillar-kicker {
-		margin: 0 0 $spacing2;
+		margin: 0;
 		font-size: $font-size8;
 		font-weight: 700;
 		letter-spacing: 0.08em;
 		color: $base-color;
-	}
-
-	.about-cta-inner {
-		text-align: center;
+		min-width: 2.2rem;
+		padding-top: 0.02rem;
 	}
 
 	.about-cta-inner {
 		max-width: 46em;
 		margin-inline: auto;
+		text-align: center;
 
 		h2 {
 			max-width: 14ch;
@@ -321,18 +365,6 @@ useSeoMeta({
 	@include media(xsm, sm) {
 		h1 {
 			max-width: none;
-		}
-
-		.copy {
-			padding-right: 0;
-		}
-
-		.art {
-			justify-content: center;
-		}
-
-		.art img {
-			width: min(100%, 26rem);
 		}
 	}
 }
