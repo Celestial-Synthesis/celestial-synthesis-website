@@ -28,20 +28,34 @@ Company website built with Nuxt 3 and Nuxt Content.
 1. Install dependencies:
 
   ```bash
-  yarn install
+  npm install
   ```
 
 2. Start development server:
 
   ```bash
-  yarn dev
+  npm run dev
   ```
 
 3. Build for production:
 
   ```bash
-  yarn build
+  npm run build
   ```
+
+## End-to-end checks
+
+Run the Playwright regression suite:
+
+```bash
+npm run test:e2e
+```
+
+Open Playwright UI mode:
+
+```bash
+npm run test:e2e:ui
+```
 
 ## Content editing (Decap)
 
@@ -56,3 +70,8 @@ Current editable collections:
 
 - Boilerplate extras and unused template pages/files were removed.
 - Placeholder assets are currently used for the company logo and FlowR product visual.
+
+## Agent playbook
+
+- Repository agent instructions live in `AGENTS.md`.
+- For user-visible changes, agents are expected to verify behavior with Playwright before treating the task as complete.

@@ -12,7 +12,7 @@
 							<a class="contact-email" href="mailto:contact@celestialsynthesis.com">contact@celestialsynthesis.com</a>
 						</p>
 						<div class="actions">
-							<NuxtLink class="btn btn-primary" to="/product/flow-r">Explore FlowR</NuxtLink>
+							<NuxtLink class="btn btn-primary" to="/product/flowr">Explore FlowR</NuxtLink>
 							<NuxtLink class="btn btn-secondary" to="/about">About Celestial Synthesis</NuxtLink>
 						</div>
 					</div>
@@ -38,7 +38,7 @@
 					<div>
 						<h3>FlowR</h3>
 						<p>See how FlowR helps people explain websites, internal tools, and new features with clearer guidance and less repeated effort.</p>
-						<NuxtLink class="text-link" to="/product/flow-r">Open FlowR Page</NuxtLink>
+						<NuxtLink class="text-link" to="/product/flowr">Open FlowR Page</NuxtLink>
 					</div>
 					</article>
 					<article class="contact-link-row">

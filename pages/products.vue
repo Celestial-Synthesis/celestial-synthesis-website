@@ -57,7 +57,8 @@ const { data: productsList } = reactive(await useAsyncData("products", () =>
 );
 
 function returnSlug(s) {
-	return s.replace(/([a-z])([A-Z])/g, "$1-$2").replace(/[\s_]+/g, "-").toLowerCase();
+	const slug = s.replace(/([a-z])([A-Z])/g, "$1-$2").replace(/[\s_]+/g, "-").toLowerCase();
+	return slug;
 }
 
 useSeoMeta({

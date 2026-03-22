@@ -5,19 +5,21 @@
     "build": "nuxt build",
     "dev": "nuxt dev --host 0.0.0.0",
     "generate": "nuxt generate",
+    "test:e2e": "playwright test",
+    "test:e2e:ui": "playwright test --ui",
     "preview": "nuxt preview",
     "start": "node .output/server/index.mjs",
     "postinstall": "nuxt prepare"
   },
   "devDependencies": {
     "@nuxt/content": "^2.8.2",
+    "@playwright/test": "^1.58.2",
     "@types/node": "^18",
     "nuxt": "^3.7.1",
     "sass": "^1.62.1",
     "sass-loader": "^13.3.0",
     "webpack": "^5.84.0"
   },
-  "dependencies": {},
   "overrides": {
     "@parcel/watcher": "2.5.6",
     "@parcel/watcher-wasm": "2.5.6"

@@ -1,5 +1,5 @@
 <template>
-	<div class="layout-wrapper" :class="{'--firstVisitAnimation': firstVisit }">
+	<div class="layout-wrapper" :class="{'--firstVisitAnimation': firstVisit, 'theme-flowr': isFlowRPage }">
 		<LayoutHeader />
 		<div class="page-wrapper default">
 			<slot />
@@ -13,6 +13,7 @@
 const route = useRoute();
 // initiallize 'firstVisit' state => changed via watch 
 const firstVisit = useState("firstVisit", () => route.path === '/' ? true : false);
+const isFlowRPage = computed(() => route.path === '/product/flowr');
 
 watch( () => route.fullPath,
 	() => {

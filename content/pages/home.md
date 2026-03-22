@@ -17,7 +17,7 @@ content: |
 
   FlowR helps teams capture browser workflows and replay them through clear, guided walkthroughs.
 
-  [View FlowR](/product/flow-r)
+  [View FlowR](/product/flowr)
   [Browse all products](/products)
 
   ## Contact

@@ -1,15 +1,20 @@
 <template>
-	<footer>
+	<footer :class="{ 'theme-flowr-footer': isFlowRPage }">
 		<div id="company-footer">
 			<p>© {{ new Date().getFullYear() }} Celestial Synthesis. All rights reserved.</p>
 			<nav aria-label="Footer">
 				<NuxtLink to="/about">About Us</NuxtLink>
-				<NuxtLink to="/product/flow-r">FlowR</NuxtLink>
+				<NuxtLink to="/product/flowr">FlowR</NuxtLink>
 				<NuxtLink to="/contact">Contact</NuxtLink>
 			</nav>
 		</div>
 	</footer>
 </template>
+
+<script setup>
+const route = useRoute();
+const isFlowRPage = computed(() => route.path === '/product/flowr');
+</script>
 
 <style lang="scss" scoped>
 	footer {
@@ -31,6 +36,10 @@
 			height: auto;
 			margin: $spacing3 $spacing4;
 		}
+	}
+
+	footer.theme-flowr-footer {
+		background: $white;
 	}
 
 	#company-footer {
@@ -64,5 +73,20 @@
 				color: $grey;
 			}
 		}
+	}
+
+	.theme-flowr-footer #company-footer {
+		background: $white;
+	}
+
+	.theme-flowr-footer #company-footer nav a,
+	.theme-flowr-footer #company-footer nav a:visited {
+		color: #8d2e3a;
+	}
+
+	.theme-flowr-footer #company-footer nav a:hover,
+	.theme-flowr-footer #company-footer nav a.router-link-active,
+	.theme-flowr-footer #company-footer nav a.router-link-exact-active {
+		color: #5a1c24;
 	}
 </style>

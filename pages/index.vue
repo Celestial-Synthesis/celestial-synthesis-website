@@ -59,7 +59,7 @@
                 alt="FlowR workflow illustration"
               />
             </div>
-            <NuxtLink class="text-link" to="/product/flow-r"
+            <NuxtLink class="text-link" to="/product/flowr"
               >Explore FlowR</NuxtLink
             >
           </article>
@@ -170,7 +170,7 @@
             <li>Help teams explain and adopt new product features faster</li>
           </ul>
           <div class="hero-actions hero-actions--dark">
-            <NuxtLink class="btn btn-primary" to="/product/flow-r"
+            <NuxtLink class="btn btn-primary" to="/product/flowr"
               >Learn More About FlowR</NuxtLink
             >
             <NuxtLink class="btn btn-secondary" to="/contact"
@@ -197,7 +197,7 @@
           your business really needs.
         </h2>
         <div class="hero-actions hero-actions--centered">
-          <NuxtLink class="btn btn-primary" to="/product/flow-r"
+          <NuxtLink class="btn btn-primary" to="/product/flowr"
             >Explore FlowR</NuxtLink
           >
           <NuxtLink class="btn btn-secondary" to="/contact"
