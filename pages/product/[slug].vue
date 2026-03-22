@@ -44,7 +44,7 @@
 				<div class="section-inner flowr-section-inner">
 					<header class="section-header section-header--wide">
 						<p class="section-eyebrow">Comparison</p>
-						<h2>Why guided replay works better for repeatable workflows.</h2>
+						<h2>What changes when replay is guided, not passive.</h2>
 						<p>FlowR is built for repeatable browser tasks. Video still works for quick one-off demos.</p>
 					</header>
 					<div class="comparison-table-wrap">
