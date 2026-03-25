@@ -30,6 +30,10 @@ content: |
 
   Dynamic page changes can require step fixes. FlowR includes tools to re-record and repair broken steps.
 
+  ### How can I record hover, right-click, or scroll steps?
+
+  Right-click on the webpage element and select the action you want to record.
+
   ## Privacy and Security Notes
 
   Claims and wording on privacy and security are qualified to match implementation realities and legal guardrails.

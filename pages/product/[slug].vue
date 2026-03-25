@@ -246,6 +246,7 @@ const flowrFaqs = [
 	{ question: "Who is FlowR for?", answer: "FlowR is built for product, customer success, support, operations, onboarding, and training teams. It also works well for anyone who needs to explain a website process clearly to people who are less comfortable navigating digital tools." },
 	{ question: "What can I create with FlowR?", answer: "You can create guided walkthroughs for onboarding, internal SOPs, support responses, product demos, training flows, and other repeatable operational processes." },
 	{ question: "What actions can FlowR record?", answer: "FlowR records common website interactions such as clicks, text input, page navigation, hover states, scrolling, and keyboard-driven steps." },
+	{ question: "How can I record hover, right-click, or scroll steps?", answer: "Right-click the webpage element and choose the action you want to capture." },
 	{ question: "Can I replay walkthroughs on a live website?", answer: "Yes. FlowR replays the steps directly in the browser so the walkthrough stays anchored to the actual interface people are using." },
 	{ question: "Can I edit a walkthrough after I record it?", answer: "Yes. You can revise instructions, adjust steps, insert new ones, and keep a walkthrough current as the product or process changes." },
 	{ question: "What if a website changes and a recorded step stops working?", answer: "FlowR is designed for that reality. You can repair or re-record individual steps instead of rebuilding the full walkthrough from the beginning." },
