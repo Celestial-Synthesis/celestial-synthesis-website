@@ -13,7 +13,7 @@
 
 <script setup>
 const route = useRoute();
-const isFlowRPage = computed(() => route.path === '/product/flowr');
+const isFlowRPage = computed(() => route.path === '/product/flowr' || route.path.startsWith('/product/flowr/playground'));
 </script>
 
 <style lang="scss" scoped>

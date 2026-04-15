@@ -13,7 +13,7 @@
 const route = useRoute();
 // initiallize 'firstVisit' state => changed via watch 
 const firstVisit = useState("firstVisit", () => route.path === '/' ? true : false);
-const isFlowRPage = computed(() => route.path === '/product/flowr');
+const isFlowRPage = computed(() => route.path === '/product/flowr' || route.path.startsWith('/product/flowr/playground'));
 
 watch( () => route.fullPath,
 	() => {

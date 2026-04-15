@@ -9,9 +9,10 @@
 						<p class="lead">{{ resolvedProduct.description }} Capture the steps once, guide the next person with context, and keep the workflow usable as interfaces change.</p>
 						<div class="hero-actions">
 							<a class="btn btn-primary" :href="chromeStoreUrl" target="_blank" rel="noreferrer">Start free on Chrome</a>
+							<a class="btn btn-primary" :href="firefoxAddonUrl" target="_blank" rel="noreferrer">Start free on Firefox</a>
 							<NuxtLink class="btn btn-secondary" to="/contact">Get a custom solution</NuxtLink>
 						</div>
-						<p class="browser-note" aria-label="Browser availability">Available on Chrome now. Safari and Firefox coming soon.</p>
+						<p class="browser-note" aria-label="Browser availability">Available now on Chrome and Firefox. Safari support is still in progress.</p>
 					</div>
 					<div class="flowr-hero-art">
 						<div class="flowr-hero-visual">
@@ -101,8 +102,25 @@
 					<p class="section-eyebrow">Start Free</p>
 					<h2>Put it into a real workflow and see how much easier it becomes to guide, repeat, and hand off.</h2>
 					<div class="hero-actions hero-actions--centered">
-						<a class="btn btn-primary" :href="chromeStoreUrl" target="_blank" rel="noreferrer">Start free</a>
+						<a class="btn btn-primary" :href="chromeStoreUrl" target="_blank" rel="noreferrer">Start free on Chrome</a>
+						<a class="btn btn-primary" :href="firefoxAddonUrl" target="_blank" rel="noreferrer">Start free on Firefox</a>
 						<NuxtLink class="btn btn-secondary" to="/contact">Get a custom solution</NuxtLink>
+					</div>
+				</div>
+			</section>
+
+			<section class="flowr-playground-callout band-light" aria-label="FlowR playground">
+				<div class="section-inner flowr-section-inner">
+					<div class="playground-callout-card">
+						<div>
+							<p class="section-eyebrow">Practice Surface</p>
+							<h2>Use the FlowR playground to try recording and replay on realistic UI patterns.</h2>
+							<p>The playground spans multiple URLs and includes buttons, form controls, hover targets, tables, scrolling sections, and modal interactions.</p>
+						</div>
+						<div class="hero-actions">
+							<NuxtLink class="btn btn-primary" to="/product/flowr/playground">Open the FlowR playground</NuxtLink>
+							<NuxtLink class="btn btn-secondary" to="/product/flowr/playground/forms">Jump to form capture</NuxtLink>
+						</div>
 					</div>
 				</div>
 			</section>
@@ -187,7 +205,8 @@ const route = useRoute();
 const routeSlug = computed(() => String(route.params.slug || ""));
 const isFlowR = computed(() => routeSlug.value === "flowr");
 const contentSlug = computed(() => routeSlug.value);
-const chromeStoreUrl = "https://example.com/flowr-chrome";
+const chromeStoreUrl = "https://chromewebstore.google.com/detail/flowr-website-recorder/kajjcogpdapfeigbkcaoeihljpihjlie";
+const firefoxAddonUrl = "https://addons.mozilla.org/en-US/firefox/addon/flowr-website-recorder/";
 
 const flowrProductFallback = {
 	title: "FlowR",
@@ -207,7 +226,7 @@ FlowR is local-first by default, with optional cloud sync for collaboration. Pri
 
 ## Get Started
 
-FlowR is available first as a Chrome extension, with Safari and Firefox support planned.
+FlowR is available now as a Chrome extension and a Firefox add-on, with Safari support planned.
 
 If you need a tailored walkthrough for your team, contact us at [contact@celestialsynthesis.com](mailto:contact@celestialsynthesis.com).`,
 };
@@ -741,6 +760,28 @@ const imageAccentColor = computed(() => isFlowR.value ? "#8d2e3a" : undefined);
 		h2 {
 			max-width: 18ch;
 			margin: 0 auto $spacing3;
+		}
+	}
+
+	.playground-callout-card {
+		display: grid;
+		grid-template-columns: minmax(0, 1fr) auto;
+		gap: $spacing4;
+		align-items: center;
+		padding: $spacing5;
+		border-radius: $border-radius3;
+		background: rgba(255, 248, 249, 0.86);
+		border: 1px solid rgba(141, 46, 58, 0.14);
+		box-shadow: 0 1em 2em rgba(69, 22, 30, 0.05);
+
+		p:last-child {
+			max-width: 38em;
+			margin-bottom: 0;
+		}
+
+		@include media(xsm, sm) {
+			grid-template-columns: 1fr;
+			padding: $spacing4;
 		}
 	}
 

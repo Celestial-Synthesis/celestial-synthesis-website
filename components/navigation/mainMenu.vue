@@ -40,7 +40,7 @@
 <script setup>
 const mobileMenuActive = ref(false);
 const route = useRoute();
-const isFlowRPage = computed(() => route.path === '/product/flowr');
+const isFlowRPage = computed(() => route.path === '/product/flowr' || route.path.startsWith('/product/flowr/playground'));
 watch(route, () => {
 	mobileMenuActive.value = false;
 });

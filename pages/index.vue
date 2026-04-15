@@ -294,11 +294,20 @@ const heroLeadStyle = computed(() => {
   };
 });
 
-const { data: home } = reactive(
-  await useAsyncData("home", () => queryContent("/pages/home").findOne()),
+const fallbackHomeSeo = {
+  metaImage: "/images/logos/celestial-synthesis-placeholder.svg",
+  metaDescription:
+    "Celestial Synthesis builds reliable software products and solutions, including FlowR.",
+  metaTitle: "Celestial Synthesis | Software Company",
+  keywords:
+    "celestial synthesis, software company, flowr, workflow software, product engineering",
+};
+
+const { data: home } = await useAsyncData("home", () =>
+  queryContent("/pages/home").findOne(),
 );
 
-setSeoHead(home.SEOmetaData);
+setSeoHead(home.value?.SEOmetaData ?? fallbackHomeSeo);
 </script>
 
 <style lang="scss" scoped>
