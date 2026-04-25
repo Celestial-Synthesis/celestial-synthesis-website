@@ -9,14 +9,14 @@ html * {
 	scroll-behavior: smooth;
 }
 
+:root {
+	--site-max-width: 1920px;
+}
+
 html {
 	margin: 0;
 	font-size: 15px; // 11pt
 	font-family: $font-main;
-	// responsive upscaling for resolutions > 1920px
-	@include media(xlg) {
-		font-size: clamp(15px, 0rem + 0.7813vw, 30px);
-	}
 }
 
 // SCROLLBAR 
@@ -54,6 +54,12 @@ body {
 
 body * {
 	box-sizing: border-box;
+}
+
+#site-wrapper {
+	width: 100%;
+	max-width: var(--site-max-width);
+	margin-inline: auto;
 }
 
 .layout-wrapper {
