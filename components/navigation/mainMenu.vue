@@ -1,5 +1,5 @@
 <template>
-	<div id="main-menu" :class="{ 'theme-flowr-menu': isFlowRPage }">
+	<div id="main-menu">
 		<button
 			id="mobile-menu__toggle-button"
 			type="button"
@@ -19,9 +19,9 @@
 					<NuxtLink to="/" class="menu-item item--home" prefetch>
 						<span>Home</span>
 					</NuxtLink>
-					<NuxtLink to="/product/flowr" class="menu-item" prefetch>
+					<a href="http://flowr.celestialsynthesis.com/" class="menu-item">
 						<span>FlowR</span>
-					</NuxtLink>
+					</a>
 					<NuxtLink to="/about" class="menu-item" prefetch>
 						<span>About Us</span>
 					</NuxtLink>
@@ -40,7 +40,6 @@
 <script setup>
 const mobileMenuActive = ref(false);
 const route = useRoute();
-const isFlowRPage = computed(() => route.path === '/product/flowr' || route.path.startsWith('/product/flowr/playground'));
 watch(route, () => {
 	mobileMenuActive.value = false;
 });
@@ -90,12 +89,6 @@ nav {
 		background: rgba(255, 255, 255, 0.97);
 		border: 1px solid rgba(30, 43, 61, 0.08);
 		box-shadow: 0 1.2em 2.4em rgba(23, 37, 58, 0.08);
-	}
-}
-
-.theme-flowr-menu .mobile-menu-panel {
-	@include media(xsm) {
-		padding-top: $spacing2;
 	}
 }
 
@@ -175,28 +168,6 @@ nav {
 	}
 }
 
-.theme-flowr-menu .main-menu__basic a.menu-item.router-link-active span,
-.theme-flowr-menu .main-menu__basic a.menu-item.router-link-exact-active span,
-.theme-flowr-menu .main-menu__basic a.menu-item:hover span {
-	background: #f8edf0;
-	color: #8d2e3a;
-}
-
-.theme-flowr-menu .main-menu__basic a.menu-item.router-link-active span,
-.theme-flowr-menu .main-menu__basic a.menu-item.router-link-exact-active span {
-	font-weight: 700;
-}
-
-@include media(xsm) {
-	.theme-flowr-menu .main-menu__basic a.menu-item.router-link-active span,
-	.theme-flowr-menu .main-menu__basic a.menu-item.router-link-exact-active span,
-	.theme-flowr-menu .main-menu__basic a.menu-item:hover span {
-		background: transparent;
-		border-color: rgba(90, 28, 36, 0.22);
-		color: #8d2e3a;
-	}
-}
-
 .header-cta {
 	display: inline-flex;
 	align-items: center;
@@ -229,28 +200,6 @@ nav {
 		color: $base-color;
 	}
 }
-
-.theme-flowr-menu .header-cta {
-	background: #8d2e3a;
-	border-color: #8d2e3a;
-	color: $white;
-
-	&:hover {
-		background: #5a1c24;
-		border-color: #5a1c24;
-	}
-
-	@include media(xsm) {
-		background: transparent;
-		color: #8d2e3a;
-
-		&:hover {
-			background: transparent;
-			color: #5a1c24;
-		}
-	}
-}
-
 
 // toggle states/ mobile
 
@@ -303,13 +252,6 @@ nav.mobileMenuOpen {
 #mobile-menu__toggle-button.mobileMenuOpen {
 	@include media(xsm) {
 		color: $base-color;
-	}
-}
-
-.theme-flowr-menu #mobile-menu__toggle-button,
-.theme-flowr-menu #mobile-menu__toggle-button.mobileMenuOpen {
-	@include media(xsm) {
-		color: #5a1c24;
 	}
 }
 

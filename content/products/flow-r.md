@@ -1,6 +1,7 @@
 ---
 title: FlowR
 description: Record and replay guided website workflows with clarity and control.
+externalUrl: "http://flowr.celestialsynthesis.com/"
 content: |
   ## Value Proposition
 
@@ -40,7 +41,7 @@ content: |
 
   ## Get Started
 
-  [Open FlowR](https://example.com/flowr)
+  [Open FlowR](http://flowr.celestialsynthesis.com/)
 
   If you need a tailored demo for your team, contact us at [contact@celestialsynthesis.com](mailto:contact@celestialsynthesis.com).
 image: /images/products/flowr-illustration.webp

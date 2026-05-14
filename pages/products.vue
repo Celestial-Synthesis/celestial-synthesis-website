@@ -27,7 +27,11 @@
 				</div>
 				<div class="cards-grid">
 				<article class="product-card" v-for="product in productsList" :key="product._path">
-					<NuxtLink :to="'/product/' + returnSlug(product.title)">
+					<component
+						:is="product.externalUrl ? 'a' : 'NuxtLink'"
+						:href="product.externalUrl || undefined"
+						:to="product.externalUrl ? undefined : '/product/' + returnSlug(product.title)"
+					>
 						<img :src="product.image" :alt="product.title" />
 						<div class="card-copy">
 							<p class="card-kicker">Product</p>
@@ -35,7 +39,7 @@
 							<p>{{ product.description }}</p>
 							<span class="text-link">View Details</span>
 						</div>
-					</NuxtLink>
+					</component>
 				</article>
 				</div>
 			</div>

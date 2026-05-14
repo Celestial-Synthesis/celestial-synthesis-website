@@ -59,9 +59,7 @@
                 alt="FlowR workflow illustration"
               />
             </div>
-            <NuxtLink class="text-link" to="/product/flowr"
-              >Explore FlowR</NuxtLink
-            >
+            <a class="text-link" href="http://flowr.celestialsynthesis.com/">Explore FlowR</a>
           </article>
         </div>
       </div>
@@ -170,9 +168,7 @@
             <li>Help teams explain and adopt new product features faster</li>
           </ul>
           <div class="hero-actions hero-actions--dark">
-            <NuxtLink class="btn btn-primary" to="/product/flowr"
-              >Learn More About FlowR</NuxtLink
-            >
+            <a class="btn btn-primary" href="http://flowr.celestialsynthesis.com/">Learn More About FlowR</a>
             <NuxtLink class="btn btn-secondary" to="/contact"
               >Talk To Our Team</NuxtLink
             >
@@ -197,9 +193,7 @@
           your business really needs.
         </h2>
         <div class="hero-actions hero-actions--centered">
-          <NuxtLink class="btn btn-primary" to="/product/flowr"
-            >Explore FlowR</NuxtLink
-          >
+          <a class="btn btn-primary" href="http://flowr.celestialsynthesis.com/">Explore FlowR</a>
           <NuxtLink class="btn btn-secondary" to="/contact"
             >Talk To The Team</NuxtLink
           >

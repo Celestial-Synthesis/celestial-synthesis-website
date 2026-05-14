@@ -71,7 +71,7 @@
 				<p class="section-eyebrow">Want To See How We Build?</p>
 				<h2>Explore FlowR or talk to our team.</h2>
 				<div class="actions">
-					<NuxtLink class="btn btn-primary" to="/product/flowr">Explore FlowR</NuxtLink>
+					<a class="btn btn-primary" href="http://flowr.celestialsynthesis.com/">Explore FlowR</a>
 					<NuxtLink class="btn btn-secondary" to="/contact">Talk to the team</NuxtLink>
 				</div>
 			</div>
