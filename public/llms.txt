@@ -1,0 +1,27 @@
+# Celestial Synthesis
+
+> Celestial Synthesis is a software company website for teams evaluating the company, its product FlowR, and ways to get in touch.
+
+Celestial Synthesis builds reliable, scalable software products and solutions. The main product highlighted on this site is FlowR, a local-first tool for recording and replaying guided browser workflows.
+
+Important notes:
+
+- The primary public company information is on the main website pages listed below.
+- FlowR is linked from this site but is hosted separately at `flowr.celestialsynthesis.com`.
+- Contact for sales, demos, and partnerships: contact@celestialsynthesis.com.
+
+## Main Pages
+
+- [Home](https://celestialsynthesis.com/): Overview of the company, featured product, and primary calls to action.
+- [About](https://celestialsynthesis.com/about): Background on the company and its software philosophy.
+- [Products](https://celestialsynthesis.com/products): Product overview and links to publicly available offerings.
+- [Contact](https://celestialsynthesis.com/contact): Contact details for collaboration, demos, and business inquiries.
+
+## Products
+
+- [FlowR](http://flowr.celestialsynthesis.com/): Record and replay guided browser workflows with step repair, sharing, and export support.
+
+## Optional
+
+- [Sitemap](https://celestialsynthesis.com/sitemap.xml): Machine-readable list of indexable pages on the main website.
+- [Robots](https://celestialsynthesis.com/robots.txt): Crawl guidance for automated agents.
