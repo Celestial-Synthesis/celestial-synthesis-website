@@ -5,7 +5,8 @@
         <div ref="heroCopy" class="hero-copy">
           <h1 ref="heroTitle" :style="heroTitleStyle">Celestial Synthesis</h1>
           <p class="lead" :style="heroLeadStyle">
-            Where boundless imagination becomes precise solutions.
+            <span class="lead-line">Where boundless imagination</span>
+            <span class="lead-line">becomes precise solutions.</span>
           </p>
         </div>
       </div>
@@ -14,52 +15,170 @@
     <section class="pathways band-light" aria-label="What we build">
       <div class="section-inner">
         <header class="section-header">
-          <p class="section-eyebrow">What We Build</p>
-          <h2>Software That Helps People Work Smarter</h2>
+          <p class="section-eyebrow">What We Can Build For You</p>
+          <h2>
+            From a simple business website to the software your team depends on
+            daily.
+          </h2>
+          <p>
+            Paid traffic only matters if visitors quickly understand whether you
+            can solve their problem. We make that path clear, practical, and
+            grounded in real delivery experience.
+          </p>
         </header>
         <div class="pathway-grid">
           <article class="pathway-card">
-            <p class="pathway-kicker">Business Solutions</p>
+            <p class="pathway-kicker">Business Websites</p>
             <h3>
-              <span class="pathway-title-line">Need software that</span>
-              <span class="pathway-title-line">helps your business move</span>
-              <span class="pathway-title-line">faster and with less effort?</span>
+              <span class="pathway-title-line"
+                >Landing pages and company websites</span
+              >
+              <span class="pathway-title-line"
+                >that explain your value clearly</span
+              >
+              <span class="pathway-title-line">and convert better.</span>
             </h3>
             <p>
-              We build practical digital solutions for businesses that want to
-              improve operations, reduce repetitive work, and create better
-              systems for the people behind them.
+              When your business needs a sharper online presence, we build pages
+              that present your offer cleanly, support marketing, and make it
+              easy for interested prospects to contact you.
             </p>
             <div class="pathway-media">
               <img
-                src="/images/header/about-us-illustration.webp"
+                src="/images/header/website-illustration.webp"
                 width="1200"
                 height="760"
-                alt="Product delivery illustration"
+                alt="Website and product planning illustration"
               />
             </div>
-            <NuxtLink class="text-link" to="/about">Learn About Celestial Synthesis</NuxtLink>
+            <NuxtLink class="text-link" to="/contact"
+              >Talk About Your Website</NuxtLink
+            >
           </article>
-          <article class="pathway-card pathway-card">
-            <p class="pathway-kicker">Flagship Product</p>
+          <article class="pathway-card">
+            <p class="pathway-kicker">Business Systems And SaaS</p>
             <h3>
-              <span class="pathway-title-line">FlowR brings clearer</span>
-              <span class="pathway-title-line">guidance to websites, tools,</span>
-              <span class="pathway-title-line">and team workflows.</span>
+              <span class="pathway-title-line"
+                >Internal tools, workflow systems,</span
+              >
+              <span class="pathway-title-line">customer platforms, and</span>
+              <span class="pathway-title-line">full SaaS products.</span>
             </h3>
             <p>
-              As the first product we built, FlowR shows how we turn everyday
-              friction into something simple, usable, and easy to share.
+              We work with businesses that need more than a brochure site,
+              whether that means operations software, a product MVP, or a more
+              complex platform that needs to scale over time.
             </p>
             <div class="pathway-media">
               <img
-                src="/images/products/flowr-illustration.webp"
+                src="/images/header/business-system-illustration.webp"
                 width="1400"
                 height="840"
-                alt="FlowR workflow illustration"
+                alt="Business systems and SaaS illustration"
               />
             </div>
-            <a class="text-link" href="http://flowr.celestialsynthesis.com/">Explore FlowR</a>
+            <NuxtLink class="text-link" to="/contact"
+              >Discuss Your Software Idea</NuxtLink
+            >
+          </article>
+        </div>
+      </div>
+    </section>
+
+    <section class="audience band-white" aria-label="Who we help">
+      <div class="section-inner audience-inner">
+        <header class="section-header section-header--compact">
+          <p class="section-eyebrow">Who This Is For</p>
+          <h2>
+            You likely need us if your business is facing one of these problems.
+          </h2>
+        </header>
+        <div class="audience-notes">
+          <article class="audience-note">
+            <p class="audience-item__kicker">Visibility</p>
+            <h4>Website traffic is not becoming real enquiries.</h4>
+            <p>
+              Better positioning, structure, and calls to action can turn more
+              interest into conversation.
+            </p>
+          </article>
+          <article class="audience-note">
+            <p class="audience-item__kicker">Operations</p>
+            <h4>Too much important work is still being handled manually.</h4>
+            <p>
+              Internal tools and workflow systems can remove repeated work and
+              improve day-to-day visibility.
+            </p>
+          </article>
+          <article class="audience-note">
+            <p class="audience-item__kicker">New Product</p>
+            <h4>You need a capable team to shape and build the first version.</h4>
+            <p>
+              We help define what to build first so the product starts with a
+              cleaner scope and better technical decisions.
+            </p>
+          </article>
+        </div>
+      </div>
+    </section>
+
+    <section
+      class="ai-solutions band-blue"
+      aria-label="AI integration and AI-powered solutions"
+    >
+      <div class="section-inner ai-solutions-layout">
+        <div class="ai-overview">
+          <header class="section-header section-header--compact ai-overview__header">
+            <p class="section-eyebrow">AI Integration</p>
+            <h2>
+              We can help you turn AI from a buzzword into a useful business
+              capability.
+            </h2>
+            <p>
+              We build AI-powered solutions that fit into real operations,
+              whether that means adding AI features into an existing product,
+              creating internal AI assistants, or automating work with the
+              right human review in place.
+            </p>
+          </header>
+          <ul class="ai-pillars" aria-label="AI capabilities overview">
+            <li>Product AI integration</li>
+            <li>Internal AI assistants</li>
+            <li>Automation with human checks</li>
+          </ul>
+        </div>
+        <div class="ai-feature-list">
+          <article class="ai-feature">
+            <span class="ai-feature__no">01</span>
+            <div>
+              <h3>AI features inside your existing product</h3>
+              <p>
+                We can integrate AI into websites, internal systems, and
+                customer-facing software without forcing a full rebuild.
+              </p>
+            </div>
+          </article>
+          <article class="ai-feature">
+            <span class="ai-feature__no">02</span>
+            <div>
+              <h3>Internal copilots and knowledge assistants</h3>
+              <p>
+                From search and summarisation to guided workflows, we can create
+                AI tools that help teams move faster and make better use of
+                company knowledge.
+              </p>
+            </div>
+          </article>
+          <article class="ai-feature">
+            <span class="ai-feature__no">03</span>
+            <div>
+              <h3>AI-powered automation with human checks</h3>
+              <p>
+                We focus on useful automation, clear review points, and
+                responsible rollout so the result is workable in the real
+                world, not just impressive in a demo.
+              </p>
+            </div>
           </article>
         </div>
       </div>
@@ -68,46 +187,46 @@
     <section class="mission band-white" aria-label="Mission highlights">
       <div class="section-inner mission-inner">
         <header class="section-header">
-          <p class="section-eyebrow">Why Teams Trust Us</p>
-          <h2>Built By Engineers Who Know Software Beyond The Pitch</h2>
+          <p class="section-eyebrow">Why Businesses Engage Us</p>
+          <h2>
+            Clear thinking, right-sized scope, and software built for real use.
+          </h2>
           <p>
-            Our team brings more than a decade of experience in software and
-            has contributed to mature products used by millions. We value clear
-            thinking, practical decisions, and solutions that stay useful long
-            after launch.
+            We focus on understanding the practical problem first, then matching
+            the solution to the level of complexity your business actually
+            needs.
           </p>
         </header>
         <div class="mission-list">
           <article>
             <span>01</span>
             <div>
-              <h3>Real Product Experience</h3>
+              <h3>Business-First Problem Solving</h3>
               <p>
-                We are not guessing from the outside. We have helped build
-                software at scale and bring that experience into every product
-                and client solution we create.
+                We help clarify the problem before recommending the build, so
+                you do not spend time and budget solving the wrong thing.
               </p>
             </div>
           </article>
           <article>
             <span>02</span>
             <div>
-              <h3>Smart Elegant Solutions</h3>
+              <h3>Solutions That Fit The Actual Need</h3>
               <p>
-                We believe many complex problems can be solved with a smarter,
-                simpler approach that removes friction instead of adding more
-                process around it.
+                Some teams need a sharper website, others need a workflow tool
+                or product MVP. We help define the right scope instead of
+                forcing a larger project than necessary.
               </p>
             </div>
           </article>
           <article>
             <span>03</span>
             <div>
-              <h3>Helpful From Start To Finish</h3>
+              <h3>Built For Long-Term Use</h3>
               <p>
-                We stay approachable throughout the process, helping teams make
-                better decisions early and staying involved until the solution
-                works in the real world.
+                We build with clarity, maintainability, and adoption in mind so
+                the result stays useful after launch instead of becoming another
+                system your team avoids.
               </p>
             </div>
           </article>
@@ -119,32 +238,32 @@
       <div class="section-inner">
         <header class="section-header section-header--compact">
           <p class="section-eyebrow">How We Work</p>
-          <h2>From Business Friction To Better Systems</h2>
+          <h2>From business friction to a software plan that makes sense.</h2>
         </header>
         <div class="journey-grid">
           <article class="journey-step">
             <span class="step-no">01</span>
-            <h3>Understand The Problem</h3>
+            <h3>Clarify The Real Need</h3>
             <p>
-              We start by understanding where time, effort, and clarity are
-              being lost so the right solution becomes easier to define.
+              We start with the business problem, the workflow, and the decision
+              points that matter before recommending any build.
             </p>
           </article>
           <article class="journey-step">
             <span class="step-no">02</span>
-            <h3>Shape The Right Solution</h3>
+            <h3>Recommend The Right Scope</h3>
             <p>
-              We recommend a practical path forward, whether that means a new
-              product, a focused internal tool, or a simpler workflow that gets
-              the job done.
+              Sometimes the answer is a fast website project. Sometimes it is an
+              internal tool or SaaS platform. We help you choose the right level
+              of solution.
             </p>
           </article>
           <article class="journey-step">
             <span class="step-no">03</span>
-            <h3>Build And Support</h3>
+            <h3>Build For Real Use</h3>
             <p>
-              We deliver with long-term usefulness in mind, so teams can adopt
-              the solution with confidence and keep growing from it.
+              We build with adoption, maintainability, and long-term usefulness
+              in mind so the software stays valuable after launch.
             </p>
           </article>
         </div>
@@ -155,20 +274,31 @@
       <div class="section-inner spotlight-inner">
         <div class="spotlight-copy">
           <p class="section-eyebrow">Product Spotlight</p>
-          <h2>FlowR: A Practical Way To Show People How To Use The Web</h2>
+          <h2>
+            FlowR shows how we turn everyday friction into a clear software
+            product.
+          </h2>
           <p>
-            FlowR is the first product we built at Celestial Synthesis. It
-            helps people communicate website and tool usage more clearly,
-            whether they are guiding family members, onboarding teams, or
-            introducing newly released features across departments.
+            FlowR is our own product, built to make website and tool guidance
+            easier to communicate. It is a useful example of how we approach
+            software: identify friction, simplify the user experience, and make
+            the result practical enough to use immediately.
           </p>
           <ul>
-            <li>Show someone exactly how to complete a task on a website</li>
-            <li>Make internal training easier for browser-based tools</li>
-            <li>Help teams explain and adopt new product features faster</li>
+            <li>Turn a practical pain point into a focused digital product</li>
+            <li>
+              Design for usability instead of adding unnecessary complexity
+            </li>
+            <li>
+              Ship software that can support training, onboarding, and adoption
+            </li>
           </ul>
           <div class="hero-actions hero-actions--dark">
-            <a class="btn btn-primary" href="http://flowr.celestialsynthesis.com/">Learn More About FlowR</a>
+            <a
+              class="btn btn-primary"
+              href="http://flowr.celestialsynthesis.com/"
+              >Learn More About FlowR</a
+            >
             <NuxtLink class="btn btn-secondary" to="/contact"
               >Talk To Our Team</NuxtLink
             >
@@ -187,15 +317,17 @@
 
     <section class="closing-cta band-accent">
       <div class="section-inner closing-inner">
-        <p class="section-eyebrow">See What We Build</p>
+        <p class="section-eyebrow">Start The Conversation</p>
         <h2>
-          Explore FlowR, or start a conversation about the kind of software
-          your business really needs.
+          If you need an IT or software solution, start with a practical
+          conversation and we will help you scope the right next move.
         </h2>
         <div class="hero-actions hero-actions--centered">
-          <a class="btn btn-primary" href="http://flowr.celestialsynthesis.com/">Explore FlowR</a>
-          <NuxtLink class="btn btn-secondary" to="/contact"
+          <NuxtLink class="btn btn-primary" to="/contact"
             >Talk To The Team</NuxtLink
+          >
+          <NuxtLink class="btn btn-secondary" to="/contact"
+            >Ask About Your Project</NuxtLink
           >
         </div>
       </div>
@@ -420,10 +552,20 @@ setSeoHead(home.value?.SEOmetaData ?? fallbackHomeSeo);
     display: grid;
     justify-items: center;
 
+    .hero-kicker {
+      margin: 0 0 $spacing2;
+      color: rgba(255, 255, 255, 0.84);
+      font-family: $font-accent;
+      font-size: $font-size8;
+      font-weight: 600;
+      letter-spacing: 0.08em;
+      text-transform: uppercase;
+    }
+
     h1 {
       font-size: clamp(3.2rem, 2.2rem + 3vw, 6.6rem);
       line-height: 0.92;
-      max-width: none;
+      max-width: 12ch;
       margin-bottom: $spacing2;
       color: $white;
       letter-spacing: -0.03em;
@@ -441,11 +583,19 @@ setSeoHead(home.value?.SEOmetaData ?? fallbackHomeSeo);
     margin-inline: auto;
     font-size: clamp(1.18rem, 1rem + 0.55vw, 1.55rem);
     line-height: 1.6;
-    max-width: 28ch;
+    max-width: 38ch;
     color: rgba(255, 255, 255, 0.92);
     text-shadow: 0 0.08em 0.3em rgba(13, 21, 33, 0.18);
     will-change: transform, opacity;
     transform-origin: center top;
+  }
+
+  .hero-copy .lead-line {
+    display: block;
+  }
+
+  .hero-actions--hero {
+    margin-top: $spacing4;
   }
 
   .panel-label,
@@ -503,8 +653,156 @@ setSeoHead(home.value?.SEOmetaData ?? fallbackHomeSeo);
     }
   }
 
-  .pathway-card--accent {
-    background: #eef5fd;
+  .audience-inner {
+    display: grid;
+    gap: $spacing4;
+  }
+
+  .audience-item__kicker {
+    margin: 0;
+    font-family: $font-accent;
+    font-size: $font-size8;
+    line-height: 1.2;
+    font-weight: 700;
+    color: $base-color;
+    letter-spacing: 0.08em;
+    text-transform: uppercase;
+  }
+
+  .audience-note {
+    padding: $spacing4;
+    border-radius: $border-radius3;
+    background: rgba(255, 255, 255, 0.86);
+    border: 1px solid rgba(42, 77, 111, 0.08);
+    box-shadow: 0 1em 2em rgba(30, 43, 61, 0.04);
+
+    h4 {
+      font-size: clamp(1.2rem, 1.05rem + 0.45vw, 1.45rem);
+      line-height: 1.15;
+      margin-bottom: $spacing2;
+    }
+
+    p:last-child {
+      margin-bottom: 0;
+    }
+  }
+
+  .audience-notes {
+    display: grid;
+    grid-template-columns: repeat(3, minmax(0, 1fr));
+    gap: $spacing3;
+
+    @include media(xsm, sm) {
+      grid-template-columns: 1fr;
+    }
+  }
+
+  .ai-solutions-layout {
+    display: grid;
+    grid-template-columns: minmax(0, 0.92fr) minmax(0, 1.08fr);
+    gap: $spacing5;
+    align-items: start;
+
+    @include media(xsm, sm) {
+      grid-template-columns: 1fr;
+    }
+  }
+
+  .ai-overview {
+    display: grid;
+    gap: $spacing3;
+    padding: $spacing5;
+    border-radius: $border-radius3;
+    background: rgba(255, 255, 255, 0.76);
+    border: 1px solid rgba(42, 77, 111, 0.08);
+    box-shadow: 0 1.2em 2.2em rgba(30, 43, 61, 0.05);
+  }
+
+  .ai-overview__header {
+    margin-bottom: 0;
+  }
+
+  .ai-pillars {
+    display: flex;
+    flex-wrap: wrap;
+    gap: $spacing2;
+    margin: 0;
+    padding: 0;
+    list-style: none;
+
+    li {
+      display: inline-flex;
+      align-items: center;
+      padding: 0.5rem 0.95rem;
+      border-radius: 999px;
+      background: rgba(42, 77, 111, 0.08);
+      color: $base-color;
+      font-family: $font-accent;
+      font-size: $font-size8;
+      font-weight: 600;
+      letter-spacing: 0.01em;
+    }
+  }
+
+  .ai-feature-list {
+    display: grid;
+    gap: $spacing3;
+    padding-left: clamp(0.7rem, 0.4rem + 0.8vw, 1.25rem);
+    position: relative;
+
+    &::before {
+      content: "";
+      position: absolute;
+      left: 0.35rem;
+      top: 0.5rem;
+      bottom: 0.5rem;
+      width: 1px;
+      background: linear-gradient(rgba(42, 77, 111, 0.2), rgba(42, 77, 111, 0.04));
+    }
+  }
+
+  .ai-feature {
+    display: grid;
+    grid-template-columns: auto 1fr;
+    gap: $spacing3;
+    align-items: start;
+    padding: $spacing4;
+    border-radius: $border-radius3;
+    background: rgba(255, 255, 255, 0.9);
+    border: 1px solid rgba(42, 77, 111, 0.08);
+    box-shadow: 0 1em 2em rgba(30, 43, 61, 0.04);
+    position: relative;
+
+    &::before {
+      content: "";
+      position: absolute;
+      left: calc(-1 * clamp(0.7rem, 0.4rem + 0.8vw, 1.25rem));
+      top: 1.55rem;
+      width: 0.72rem;
+      height: 0.72rem;
+      border-radius: 999px;
+      background: $base-color;
+      box-shadow: 0 0 0 0.42rem rgba(142, 197, 255, 0.18);
+    }
+
+    h3 {
+      font-size: clamp(1.35rem, 1.18rem + 0.55vw, 1.7rem);
+      line-height: 1.15;
+      margin-bottom: $spacing2;
+    }
+
+    p {
+      margin-bottom: 0;
+    }
+  }
+
+  .ai-feature__no {
+    min-width: 2.45rem;
+    font-family: $font-accent;
+    font-size: clamp(2rem, 1.55rem + 0.8vw, 2.7rem);
+    font-weight: 700;
+    line-height: 1;
+    color: $base-color;
   }
 
   .text-link {

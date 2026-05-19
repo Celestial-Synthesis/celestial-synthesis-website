@@ -11,6 +11,10 @@
 							Email us at
 							<a class="contact-email" href="mailto:contact@celestialsynthesis.com">contact@celestialsynthesis.com</a>
 						</p>
+						<div class="contact-channels" aria-label="WhatsApp contact numbers">
+							<a href="https://wa.me/6594869825?text=Hi%20Celestial%20Synthesis,%20I%20would%20like%20to%20ask%20about%20an%20IT%20or%20software%20solution." target="_blank" rel="noreferrer">WhatsApp SG: +65 9486 9825</a>
+							<a href="https://wa.me/60166823630?text=Hi%20Celestial%20Synthesis,%20I%20would%20like%20to%20ask%20about%20an%20IT%20or%20software%20solution." target="_blank" rel="noreferrer">WhatsApp MY: +60 1668 23630</a>
+						</div>
 						<div class="actions">
 							<a class="btn btn-primary" href="http://flowr.celestialsynthesis.com/">Explore FlowR</a>
 							<NuxtLink class="btn btn-secondary" to="/about">About Celestial Synthesis</NuxtLink>
@@ -190,6 +194,26 @@ useSeoMeta({
 		font-weight: 700;
 		letter-spacing: -0.01em;
 		color: $dark-grey;
+	}
+
+	.contact-channels {
+		display: grid;
+		gap: $spacing2;
+		margin-top: $spacing2;
+
+		a {
+			display: inline-flex;
+			align-items: center;
+			justify-content: flex-start;
+			width: fit-content;
+			padding: 0.7rem 1rem;
+			border-radius: 999px;
+			background: #eff8f1;
+			border: 1px solid rgba(26, 155, 32, 0.16);
+			color: #146e18;
+			font-family: $font-accent;
+			font-weight: 600;
+		}
 	}
 
 	.hero-visual {

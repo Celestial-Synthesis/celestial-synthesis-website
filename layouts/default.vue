@@ -4,6 +4,7 @@
 		<div class="page-wrapper default">
 			<slot />
 		</div>
+		<LayoutFloatingContact />
 		<LayoutFooter />
 	</div>
 </template>

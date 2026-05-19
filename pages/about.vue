@@ -66,6 +66,57 @@
 			</div>
 		</section>
 
+		<section class="credentials band-soft" aria-label="Team credentials">
+			<div class="section-inner credentials-layout">
+				<header class="section-header credentials-header">
+					<p class="section-eyebrow">Why Our Background Matters</p>
+					<h2>A team shaped by strong academic grounding and high-scale product work.</h2>
+					<p>
+						Clients usually do not just need code. They need sound technical judgement,
+						product sense, and the ability to match solution scope to business reality.
+					</p>
+				</header>
+				<div class="credentials-grid">
+					<article class="credential-card">
+						<p class="credential-kicker">Academic depth</p>
+						<h3>NUS graduates with Master's degrees</h3>
+						<p>
+							Our team includes graduates from the National University of Singapore,
+							one of Singapore's leading universities, with advanced degrees that
+							support disciplined engineering, structured problem solving, and
+							clear communication.
+						</p>
+					</article>
+					<article class="credential-card">
+						<p class="credential-kicker">Product credibility</p>
+						<h3>Experience from the largest ecommerce platform in Southeast Asia and large-scale mobile products</h3>
+						<p>
+							We have worked inside the largest ecommerce platform in Southeast Asia,
+							as well as within mobile app environments serving millions of monthly
+							active users.
+						</p>
+					</article>
+					<article class="credential-card">
+						<p class="credential-kicker">Delivery range</p>
+						<h3>From simple websites to more ambitious SaaS platforms</h3>
+						<p>
+							That mix of experience helps us support a broad range of work, from
+							business websites and conversion pages to internal systems, product MVPs,
+							and more complex SaaS builds.
+						</p>
+					</article>
+					<article class="credential-card">
+						<p class="credential-kicker">Working style</p>
+						<h3>Practical guidance before expensive technical decisions</h3>
+						<p>
+							We prefer helping businesses define the right next move first, so they do
+							not overbuild too early or underinvest in the systems that really matter.
+						</p>
+					</article>
+				</div>
+			</div>
+		</section>
+
 		<section class="about-cta band-blue">
 			<div class="section-inner about-cta-inner">
 				<p class="section-eyebrow">Want To See How We Build?</p>
@@ -324,6 +375,53 @@ useSeoMeta({
 			max-width: 14ch;
 			margin-inline: auto;
 		}
+	}
+
+	.credentials-layout {
+		display: grid;
+		gap: $spacing4;
+	}
+
+	.credentials-header {
+		margin-bottom: 0;
+	}
+
+	.credentials-grid {
+		display: grid;
+		grid-template-columns: repeat(2, minmax(0, 1fr));
+		gap: $spacing3;
+
+		@include media(xsm, sm) {
+			grid-template-columns: 1fr;
+		}
+	}
+
+	.credential-card {
+		padding: $spacing4;
+		border-radius: $border-radius3;
+		background: rgba(255, 255, 255, 0.8);
+		border: 1px solid rgba(42, 77, 111, 0.08);
+		box-shadow: 0 1em 2em rgba(30, 43, 61, 0.04);
+
+		h3 {
+			font-size: clamp(1.4rem, 1.22rem + 0.55vw, 1.8rem);
+			line-height: 1.12;
+			margin-bottom: $spacing2;
+		}
+
+		p:last-child {
+			margin-bottom: 0;
+		}
+	}
+
+	.credential-kicker {
+		margin: 0 0 $spacing1;
+		font-family: $font-accent;
+		font-size: $font-size8;
+		font-weight: 700;
+		letter-spacing: 0.08em;
+		text-transform: uppercase;
+		color: $base-color;
 	}
 
 	.actions {
