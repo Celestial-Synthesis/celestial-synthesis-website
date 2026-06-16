@@ -112,7 +112,9 @@
           </article>
           <article class="audience-note">
             <p class="audience-item__kicker">New Product</p>
-            <h4>You need a capable team to shape and build the first version.</h4>
+            <h4>
+              You need a capable team to shape and build the first version.
+            </h4>
             <p>
               We help define what to build first so the product starts with a
               cleaner scope and better technical decisions.
@@ -128,7 +130,9 @@
     >
       <div class="section-inner ai-solutions-layout">
         <div class="ai-overview">
-          <header class="section-header section-header--compact ai-overview__header">
+          <header
+            class="section-header section-header--compact ai-overview__header"
+          >
             <p class="section-eyebrow">AI Integration</p>
             <h2>
               We can help you turn AI from a buzzword into a useful business
@@ -137,8 +141,8 @@
             <p>
               We build AI-powered solutions that fit into real operations,
               whether that means adding AI features into an existing product,
-              creating internal AI assistants, or automating work with the
-              right human review in place.
+              creating internal AI assistants, or automating work with the right
+              human review in place.
             </p>
           </header>
           <ul class="ai-pillars" aria-label="AI capabilities overview">
@@ -175,8 +179,8 @@
               <h3>AI-powered automation with human checks</h3>
               <p>
                 We focus on useful automation, clear review points, and
-                responsible rollout so the result is workable in the real
-                world, not just impressive in a demo.
+                responsible rollout so the result is workable in the real world,
+                not just impressive in a demo.
               </p>
             </div>
           </article>
@@ -429,11 +433,13 @@ const fallbackHomeSeo = {
     "celestial synthesis, software company, flowr, workflow software, product engineering",
 };
 
-const { data: home } = await useAsyncData("home", () =>
-  queryContent("/pages/home").findOne(),
-);
+const { data: homeSeo } = await useAsyncData("home-seo", async () => {
+  const homeEntry = await queryContent("/pages/home").findOne();
 
-setSeoHead(home.value?.SEOmetaData ?? fallbackHomeSeo);
+  return homeEntry?.SEOmetaData ?? null;
+});
+
+setSeoHead(homeSeo.value ?? fallbackHomeSeo);
 </script>
 
 <style lang="scss" scoped>
@@ -757,7 +763,10 @@ setSeoHead(home.value?.SEOmetaData ?? fallbackHomeSeo);
       top: 0.5rem;
       bottom: 0.5rem;
       width: 1px;
-      background: linear-gradient(rgba(42, 77, 111, 0.2), rgba(42, 77, 111, 0.04));
+      background: linear-gradient(
+        rgba(42, 77, 111, 0.2),
+        rgba(42, 77, 111, 0.04)
+      );
     }
   }
 

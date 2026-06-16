@@ -17,6 +17,24 @@ test.describe("home page", () => {
     await expect(response.json()).resolves.toEqual({ countryCode: "MY" });
   });
 
+  test("does not expose the internal home content path in homepage HTML", async ({
+    request,
+  }) => {
+    const response = await request.get("/");
+
+    expect(response.ok()).toBe(true);
+    await expect(response.text()).resolves.not.toContain("/pages/home");
+  });
+
+  test("redirects the leaked internal home path to the site root", async ({
+    page,
+  }) => {
+    const response = await page.goto("/pages/home");
+
+    expect(response).not.toBeNull();
+    await expect(page).toHaveURL(/\/$/);
+  });
+
   test("renders successfully with the hero content in production-like routing", async ({
     page,
   }) => {
@@ -57,8 +75,14 @@ test.describe("home page", () => {
     await expect(
       page.locator(".home").evaluate((element) => {
         const sections = Array.from(element.querySelectorAll("section"));
-        return sections.findIndex((section) => section.classList.contains("audience")) <
-          sections.findIndex((section) => section.classList.contains("ai-solutions"));
+        return (
+          sections.findIndex((section) =>
+            section.classList.contains("audience"),
+          ) <
+          sections.findIndex((section) =>
+            section.classList.contains("ai-solutions"),
+          )
+        );
       }),
     ).resolves.toBe(true);
     await expect(
